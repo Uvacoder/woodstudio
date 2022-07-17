@@ -28,7 +28,11 @@ const Home = () => {
       <Head>
         <title>On End Studio</title>
       </Head>
-      <GridItem as="intro" align="end" css={{ padding: "$4" }}>
+      <GridItem
+        as="intro"
+        align="end"
+        css={{ padding: "$4", paddingBottom: 96 }}
+      >
         <IntroText>
           Some really nice things for your home ✸ Made upright with care by
           Justin Belcher in San Francisco.
