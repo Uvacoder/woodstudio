@@ -40,10 +40,11 @@ const Home = () => {
       <GridItem
         as="lede"
         css={{
+          height: "100%",
           background:
             "url(/photos/coffeetable-intro.jpg) center center no-repeat",
           backgroundSize: "cover",
-          height: "100%",
+          border: "1px solid $border",
         }}
       />
     </>
