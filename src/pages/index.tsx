@@ -7,16 +7,19 @@ import GridItem from "@components/GridItem";
 
 const IntroText = styled("h1", {
   marginBottom: "$3",
-  fontSize: "$h1",
+  fontSize: "$resL",
   lineHeight: "1.4",
   fontWeight: 300,
 });
 
 const ViewMore = styled("a", {
   color: theme.colors.black,
-  fontSize: "$h2",
+  fontSize: "$resM",
   fontWeight: 300,
   textDecoration: "none",
+  "&:hover": {
+    textDecoration: "underline",
+  },
 });
 
 const Home = () => {
@@ -38,7 +41,7 @@ const Home = () => {
         as="lede"
         css={{
           background:
-            "url(/photos/coffeetable-front.jpg) center center no-repeat",
+            "url(/photos/coffeetable-intro.jpg) center center no-repeat",
           backgroundSize: "cover",
           height: "100%",
         }}

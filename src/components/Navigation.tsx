@@ -3,6 +3,7 @@ import { styled, theme } from "@styles/stitches.config";
 
 import Flex from "@components/Flex";
 import GridItem from "@components/GridItem";
+import { relative } from "node:path/win32";
 
 const InstagramIcon = styled("img", {
   width: 24,
@@ -10,10 +11,14 @@ const InstagramIcon = styled("img", {
 });
 
 const Anchor = styled("a", {
+  position: "relative",
   color: theme.colors.black,
   fontSize: 21,
   textTransform: "uppercase",
   textDecoration: "none",
+  "&:hover": {
+    textDecoration: "underline",
+  },
 });
 
 const Navigation = () => {

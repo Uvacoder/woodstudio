@@ -33,6 +33,8 @@ export const {
     fontSizes: {
       h1: "42px",
       h2: "30px",
+      resM: "2.5vw",
+      resL: "3.25vw",
     },
     fonts: {
       primary: '"Open Sauce Sans", sans-serif',
