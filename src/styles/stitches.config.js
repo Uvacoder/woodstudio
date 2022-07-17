@@ -30,7 +30,10 @@ export const {
       3: "24px",
       4: "48px",
     },
-    fontSizes: {},
+    fontSizes: {
+      h1: "42px",
+      h2: "30px",
+    },
     fonts: {
       primary: '"Open Sauce Sans", sans-serif',
       secondary: '"Open Sauce Sans", sans-serif',
