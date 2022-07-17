@@ -1,0 +1,3 @@
+import { styled } from "@styles/stitches.config";
+
+export default styled("div", {});
