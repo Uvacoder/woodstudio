@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 import { styled, theme } from "@styles/stitches.config";
-
+import useIsLargescreen from "@hooks/useIsLargescreen";
 import GridItem from "@components/GridItem";
 
 const IntroText = styled("h1", {
@@ -23,6 +23,9 @@ const ViewMore = styled("a", {
 });
 
 const Home = () => {
+  const isLargescreen = useIsLargescreen();
+  console.log(isLargescreen);
+
   return (
     <>
       <Head>
