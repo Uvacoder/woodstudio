@@ -44,7 +44,7 @@ const Home = () => {
           background:
             "url(/photos/coffeetable-intro.jpg) center center no-repeat",
           backgroundSize: "cover",
-          border: "1px solid $border",
+          borderTop: "1px solid $border",
         }}
       />
     </>
