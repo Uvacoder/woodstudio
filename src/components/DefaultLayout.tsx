@@ -1,4 +1,4 @@
-import { styled } from "@styles/stitches.config";
+import { styled, th } from "@styles/stitches.config";
 
 import Flex from "@components/Flex";
 import Navigation from "@components/Navigation";
