@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { styled, theme } from "@styles/stitches.config";
 
+import Flex from "@components/Flex";
 import Logo from "@components/Logo";
 import Navigation from "@components/Navigation";
 
@@ -52,41 +53,51 @@ const Home = () => {
 
 Home.getLayout = (page: ReactElement) => {
   return (
-    <Grid>
-      <Cell css={{ gridArea: "logo", alignSelf: "center", padding: "0 $4" }}>
-        <Logo />
-      </Cell>
-      <Cell css={{ gridArea: "nav", alignSelf: "center", padding: "0 $4" }}>
-        <Navigation />
-      </Cell>
-      <Cell
-        css={{
-          gridArea: "intro",
-          alignSelf: "end",
-          padding: "$4",
-          paddingBottom: 96,
-        }}
-      >
-        {page}
-      </Cell>
-      <Cell
-        css={{
-          gridArea: "separator",
-          backgroundColor: "$border",
-          height: "100vh",
-        }}
-      />
-      <Cell
-        css={{
-          gridArea: "lede",
-          height: "100%",
-          background:
-            "url(/photos/coffeetable-intro.jpg) center center no-repeat",
-          backgroundSize: "cover",
-          borderTop: "1px solid $border",
-        }}
-      />
-    </Grid>
+    <Flex
+      as="section"
+      direction="column"
+      css={{
+        minHeight: "100%",
+        fontFamily: theme.fonts.primary,
+        backgroundColor: theme.colors.siteBg,
+      }}
+    >
+      <Grid>
+        <Cell css={{ gridArea: "logo", alignSelf: "center", padding: "0 $4" }}>
+          <Logo />
+        </Cell>
+        <Cell css={{ gridArea: "nav", alignSelf: "center", padding: "0 $4" }}>
+          <Navigation />
+        </Cell>
+        <Cell
+          css={{
+            gridArea: "intro",
+            alignSelf: "end",
+            padding: "$4",
+            paddingBottom: 96,
+          }}
+        >
+          {page}
+        </Cell>
+        <Cell
+          css={{
+            gridArea: "separator",
+            backgroundColor: "$border",
+            height: "100vh",
+          }}
+        />
+        <Cell
+          css={{
+            gridArea: "lede",
+            height: "100%",
+            background:
+              "url(/photos/coffeetable-intro.jpg) center center no-repeat",
+            backgroundSize: "cover",
+            borderTop: "1px solid $border",
+          }}
+        />
+      </Grid>
+    </Flex>
   );
 };
 

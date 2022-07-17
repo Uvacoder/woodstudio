@@ -1,5 +1,6 @@
 import { styled } from "@styles/stitches.config";
 
+import Flex from "@components/Flex";
 import Navigation from "@components/Navigation";
 import Footer from "@components/Footer";
 
@@ -18,11 +19,21 @@ const Grid = styled("div", {
 
 export const DefaultLayout = ({ children }) => {
   return (
-    <Grid>
-      <Navigation />
-      {children}
-      <Footer />
-    </Grid>
+    <Flex
+      as="section"
+      direction="column"
+      css={{
+        minHeight: "100%",
+        fontFamily: theme.fonts.primary,
+        backgroundColor: theme.colors.siteBg,
+      }}
+    >
+      <Grid>
+        <Navigation />
+        {children}
+        <Footer />
+      </Grid>
+    </Flex>
   );
 };
 
