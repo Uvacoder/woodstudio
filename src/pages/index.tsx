@@ -4,6 +4,9 @@ import Link from "next/link";
 
 import { styled, theme } from "@styles/stitches.config";
 
+import Logo from "@components/Logo";
+import Navigation from "@components/Navigation";
+
 const IntroText = styled("h1", {
   marginBottom: "$3",
   fontSize: "$resL",
@@ -19,6 +22,13 @@ const ViewMore = styled("a", {
   "&:hover": {
     textDecoration: "underline",
   },
+});
+
+const Grid = styled("div", {
+  display: "grid",
+  gridTemplateRows: "150px 1fr",
+  gridTemplateColumns: "1fr 1px 1fr",
+  gridTemplateAreas: "'logo separator nav' 'intro separator lede'",
 });
 
 const Cell = styled("div", {});
@@ -42,10 +52,16 @@ const Home = () => {
 
 Home.getLayout = (page: ReactElement) => {
   return (
-    <>
+    <Grid>
+      <Cell css={{ gridArea: "logo", alignSelf: "center", padding: "0 $4" }}>
+        <Logo />
+      </Cell>
+      <Cell css={{ gridArea: "nav", alignSelf: "center", padding: "0 $4" }}>
+        <Navigation />
+      </Cell>
       <Cell
         css={{
-          gridArea: "",
+          gridArea: "intro",
           alignSelf: "end",
           padding: "$4",
           paddingBottom: 96,
@@ -55,7 +71,14 @@ Home.getLayout = (page: ReactElement) => {
       </Cell>
       <Cell
         css={{
-          gridArea: "",
+          gridArea: "separator",
+          backgroundColor: "$border",
+          height: "100vh",
+        }}
+      />
+      <Cell
+        css={{
+          gridArea: "lede",
           height: "100%",
           background:
             "url(/photos/coffeetable-intro.jpg) center center no-repeat",
@@ -63,7 +86,7 @@ Home.getLayout = (page: ReactElement) => {
           borderTop: "1px solid $border",
         }}
       />
-    </>
+    </Grid>
   );
 };
 
