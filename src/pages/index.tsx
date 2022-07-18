@@ -51,7 +51,25 @@ const Home = () => {
   );
 };
 
-Home.getLayout = (page: ReactElement) => {
+Home.getLayout = (page: ReactElement, isMobile: boolean) => {
+  if (isMobile) {
+    return (
+      <Flex
+        as="section"
+        direction="column"
+        css={{
+          minHeight: "100%",
+          fontFamily: theme.fonts.primary,
+          backgroundColor: theme.colors.siteBg,
+        }}
+      >
+        <Logo />
+        <Navigation />
+        {page}
+      </Flex>
+    );
+  }
+
   return (
     <Flex
       as="section"

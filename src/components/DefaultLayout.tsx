@@ -17,7 +17,7 @@ const Grid = styled("div", {
   },
 });
 
-export const DefaultLayout = ({ children }) => {
+export const DefaultLayout = ({ children, isMobile }) => {
   return (
     <Flex
       as="section"

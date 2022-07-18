@@ -1,4 +1,5 @@
 import type { ReactElement, ReactNode } from "react";
+import { isMobile } from "react-device-detect";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 
@@ -8,7 +9,7 @@ import "@styles/fonts.css";
 import "@styles/reset.css";
 
 export type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
+  getLayout?: (page: ReactElement, isMobile) => ReactNode;
 };
 
 type AppPropsWithLayout = AppProps & {
@@ -19,5 +20,5 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout =
     Component.getLayout ?? ((page) => <DefaultLayout>{page}</DefaultLayout>);
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(<Component {...pageProps} />, isMobile);
 }
