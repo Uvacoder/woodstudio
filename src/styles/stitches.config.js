@@ -42,5 +42,7 @@ export const {
     },
   },
   utils: {},
-  media: {},
+  media: {
+    lg: "(min-width: 500px)",
+  },
 });

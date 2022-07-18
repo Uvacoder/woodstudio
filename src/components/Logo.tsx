@@ -1,13 +1,23 @@
-import Link from "next/link";
+import { styled } from "@styles/stitches.config";
 
-const Logo = () => {
-  return (
-    <Link href="/">
-      <a>
-        <img src="/logo.svg" alt="On End Studio" style={{ width: 360 }} />
-      </a>
-    </Link>
-  );
-};
+const Image = styled("img", {
+  variants: {
+    size: {
+      small: { width: 166 },
+      large: { width: 360 },
+    },
+  },
+});
+
+const Logo = () => (
+  <Image
+    src="/logo.svg"
+    alt="On End Studio"
+    size={{
+      "@initial": "small",
+      "@large": "large",
+    }}
+  />
+);
 
 export default Logo;
