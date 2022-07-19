@@ -15,7 +15,7 @@ const Logo = () => (
     alt="On End Studio"
     size={{
       "@initial": "small",
-      "@large": "large",
+      "@lg": "large",
     }}
   />
 );

@@ -22,14 +22,21 @@ const Anchor = styled("a", {
 
 const Grid = styled("div", {
   display: "grid",
-  minHeight: "100%",
   gridTemplateColumns: "1fr 1fr",
   gridTemplateRows: "1fr",
+  alignItems: "center",
+  borderBottom: "1px solid $border",
+  variants: {
+    size: {
+      small: { padding: "0 $2" },
+      large: { padding: "0 $4" },
+    },
+  },
 });
 
 const Navigation = () => {
   return (
-    <Grid>
+    <Grid size={{ "@initial": "small", "@lg": "large" }}>
       <Logo />
       <Flex direction="row" justify="between" align="center">
         <Flex direction="row" gap="xl">

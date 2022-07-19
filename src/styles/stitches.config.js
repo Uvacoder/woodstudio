@@ -43,6 +43,6 @@ export const {
   },
   utils: {},
   media: {
-    lg: "(min-width: 500px)",
+    lg: "(min-width: 850px)",
   },
 });

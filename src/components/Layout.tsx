@@ -4,6 +4,7 @@ import Navigation from "@components/Navigation";
 import Footer from "@components/Footer";
 
 const Grid = styled("div", {
+  display: "grid",
   gridTemplateColumns: "1fr",
   gridTemplateRows: "150px 1fr",
   minHeight: "100%",
