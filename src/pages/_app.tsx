@@ -2,7 +2,7 @@ import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 
-import DefaultLayout from "@components/DefaultLayout";
+import Layout from "@components/Layout";
 
 import "@styles/fonts.css";
 import "@styles/reset.css";
@@ -16,8 +16,7 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout =
-    Component.getLayout ?? ((page) => <DefaultLayout>{page}</DefaultLayout>);
+  const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
 
   return getLayout(<Component {...pageProps} />);
 }
