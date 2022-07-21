@@ -44,7 +44,7 @@ export const {
   utils: {},
 
   media: {
-    s: "(min-width: 600px)",
+    m: "(min-width: 600px)",
     lg: "(min-width: 900px)",
   },
 });

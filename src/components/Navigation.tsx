@@ -24,24 +24,41 @@ const Anchor = styled("a", {
 
 const Grid = styled("div", {
   display: "grid",
-  gridTemplateColumns: "1fr 1fr",
-  gridTemplateRows: "1fr",
   alignItems: "center",
   borderBottom: "1px solid $border",
   variants: {
-    padding: {
-      narrow: { padding: "0 $2" },
-      wide: { padding: "0 $4" },
+    layout: {
+      mobile: {
+        gridTemplateColumns: "1fr",
+        gridAutoFlow: "column",
+        justifyContent: "space-between",
+      },
+      desktop: {
+        gridTemplateColumns: "1fr 1fr",
+      },
     },
+    padding: {
+      compact: { padding: "0 $2" },
+      comfortable: { padding: "0 $4" },
+    },
+  },
+  defaultVariants: {
+    layout: "mobile",
+    padding: "compact",
   },
 });
 
 const Navigation = () => {
   return (
-    <Grid padding={{ "@initial": "narrow", "@s": "wide" }}>
+    <Grid padding={{ "@m": "comfortable" }} layout={{ "@m": "desktop" }}>
       <Logo />
-      <Hamburger />
-      {/* <Flex direction="row" justify="between" align="center">
+      <Hamburger display={{ "@initial": "show", "@m": "hide" }} />
+      <Flex
+        display={{ "@initial": "hide", "@m": "show" }}
+        direction="row"
+        justify="between"
+        align="center"
+      >
         <Flex direction="row" gap={{ "@initial": "l", "@lg": "xl" }}>
           <Link href="/work" passHref>
             <Anchor>Work</Anchor>
@@ -59,7 +76,7 @@ const Navigation = () => {
             <InstagramIcon src="/instagram.svg" alt="Instagram" />
           </a>
         </Link>
-      </Flex> */}
+      </Flex>
     </Grid>
   );
 };
