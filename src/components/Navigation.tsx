@@ -3,10 +3,12 @@ import { styled, theme } from "@styles/stitches.config";
 
 import Flex from "@components/Flex";
 import Logo from "@components/Logo";
+import Hamburger from "@components/Hamburger";
 
 const InstagramIcon = styled("img", {
   width: 24,
   height: 24,
+  minWidth: 24,
 });
 
 const Anchor = styled("a", {
@@ -27,19 +29,20 @@ const Grid = styled("div", {
   alignItems: "center",
   borderBottom: "1px solid $border",
   variants: {
-    size: {
-      small: { padding: "0 $2" },
-      large: { padding: "0 $4" },
+    padding: {
+      narrow: { padding: "0 $2" },
+      wide: { padding: "0 $4" },
     },
   },
 });
 
 const Navigation = () => {
   return (
-    <Grid size={{ "@initial": "small", "@lg": "large" }}>
+    <Grid padding={{ "@initial": "narrow", "@s": "wide" }}>
       <Logo />
-      <Flex direction="row" justify="between" align="center">
-        <Flex direction="row" gap="xl">
+      <Hamburger />
+      {/* <Flex direction="row" justify="between" align="center">
+        <Flex direction="row" gap={{ "@initial": "l", "@lg": "xl" }}>
           <Link href="/work" passHref>
             <Anchor>Work</Anchor>
           </Link>
@@ -56,7 +59,7 @@ const Navigation = () => {
             <InstagramIcon src="/instagram.svg" alt="Instagram" />
           </a>
         </Link>
-      </Flex>
+      </Flex> */}
     </Grid>
   );
 };

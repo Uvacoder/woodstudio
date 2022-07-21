@@ -42,7 +42,9 @@ export const {
     },
   },
   utils: {},
+
   media: {
-    lg: "(min-width: 850px)",
+    s: "(min-width: 600px)",
+    lg: "(min-width: 900px)",
   },
 });
