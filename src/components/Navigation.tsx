@@ -1,29 +1,11 @@
 import Link from "next/link";
 import { styled, theme } from "@styles/stitches.config";
 
-import Flex from "@components/Flex";
+import Box from "@components/Box";
 import Logo from "@components/Logo";
 import Hamburger from "@components/Hamburger";
 
-const InstagramIcon = styled("img", {
-  width: 24,
-  height: 24,
-  minWidth: 24,
-});
-
-const Anchor = styled("a", {
-  position: "relative",
-  color: theme.colors.black,
-  fontSize: 21,
-  textTransform: "uppercase",
-  textDecoration: "none",
-  "&:hover": {
-    textDecoration: "underline",
-  },
-});
-
-const Grid = styled("div", {
-  display: "grid",
+const GridBox = styled(Box, {
   alignItems: "center",
   borderBottom: "1px solid $border",
   variants: {
@@ -48,18 +30,69 @@ const Grid = styled("div", {
   },
 });
 
+const SpacedBox = styled(Box, {
+  variants: {
+    gap: {
+      s: { gap: "$1" },
+      m: { gap: "$2" },
+      l: { gap: "$3" },
+      xl: { gap: "$4" },
+    },
+  },
+});
+
+const SpreadBox = styled(Box, {
+  flexDirection: "row",
+  alignItems: "center",
+  variants: {
+    spacing: {
+      spread: { justifyContent: "space-between" },
+      packed: { justifyContent: "end" },
+    },
+  },
+});
+
+const InstagramIcon = styled("img", {
+  width: 24,
+  height: 24,
+  minWidth: 24,
+  marginLeft: "$3",
+});
+
+const Anchor = styled("a", {
+  position: "relative",
+  color: theme.colors.black,
+  fontSize: 21,
+  textTransform: "uppercase",
+  textDecoration: "none",
+  "&:hover": {
+    textDecoration: "underline",
+  },
+});
+
 const Navigation = () => {
   return (
-    <Grid padding={{ "@m": "comfortable" }} layout={{ "@m": "desktop" }}>
+    <GridBox
+      mode="grid"
+      padding={{ "@m": "comfortable" }}
+      layout={{ "@m": "desktop" }}
+    >
       <Logo />
-      <Hamburger display={{ "@initial": "show", "@m": "hide" }} />
-      <Flex
+      <Box display={{ "@initial": "show", "@m": "hide" }}>
+        <Hamburger />
+      </Box>
+      <SpreadBox
+        mode="flex"
         display={{ "@initial": "hide", "@m": "show" }}
-        direction="row"
-        justify="between"
-        align="center"
+        spacing={{ "@initial": "packed", "@m": "spread" }}
       >
-        <Flex direction="row" gap={{ "@initial": "l", "@lg": "xl" }}>
+        <SpacedBox
+          mode="flex"
+          gap={{ "@initial": "l", "@lg": "xl" }}
+          css={{
+            flexDirection: "row",
+          }}
+        >
           <Link href="/work" passHref>
             <Anchor>Work</Anchor>
           </Link>
@@ -69,15 +102,15 @@ const Navigation = () => {
           <Link href="/contact" passHref>
             <Anchor>Contact</Anchor>
           </Link>
-        </Flex>
+        </SpacedBox>
 
         <Link href="https://www.instagram.com/onendstudio">
           <a>
             <InstagramIcon src="/instagram.svg" alt="Instagram" />
           </a>
         </Link>
-      </Flex>
-    </Grid>
+      </SpreadBox>
+    </GridBox>
   );
 };
 

@@ -6,6 +6,7 @@ import { styled, theme } from "@styles/stitches.config";
 
 import Logo from "@components/Logo";
 import Navigation from "@components/Navigation";
+import Box from "@components/Box";
 
 const IntroText = styled("h1", {
   marginBottom: "$3",

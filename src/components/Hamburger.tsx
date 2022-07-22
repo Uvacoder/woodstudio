@@ -1,27 +1,14 @@
 import { useState } from "react";
-import type * as Stitches from "@stitches/react";
 
 import { styled } from "@styles/stitches.config";
 
-type HamburgerVariants = Stitches.VariantProps<typeof Container>;
-
 interface HamburgerProps {
-  onChange?: (boolean) => {};
-  display?: HamburgerVariants;
+  onChange?: (boolean) => void;
 }
 
 const Container = styled("div", {
   height: 32,
   width: 32,
-  variants: {
-    display: {
-      hide: { display: "none" },
-      show: { display: "auto" },
-    },
-  },
-  defaultVariants: {
-    display: "show",
-  },
 });
 const lineStyles = {
   backgroundColor: "$border",
@@ -50,7 +37,7 @@ const BottomLine = styled("div", {
   },
 });
 
-const Hamburger = ({ onChange, display }: HamburgerProps) => {
+const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     const nextValue = !isOpen;
@@ -58,7 +45,7 @@ const Hamburger = ({ onChange, display }: HamburgerProps) => {
     onChange(nextValue);
   };
   return (
-    <Container onClick={handleClick} display={display}>
+    <Container onClick={handleClick}>
       <TopLine position={isOpen ? "angled" : "flat"} />
       <BottomLine position={isOpen ? "angled" : "flat"} />
     </Container>
