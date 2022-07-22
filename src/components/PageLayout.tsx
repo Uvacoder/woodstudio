@@ -6,15 +6,26 @@ import Footer from "@components/Footer";
 
 const GridBox = styled(Box, {
   gridTemplateColumns: "1fr",
-  gridTemplateRows: "150px 1fr",
   minHeight: "100%",
-  fontFamily: theme.fonts.primary,
-  backgroundColor: theme.colors.siteBg,
+  fontFamily: "$primary",
+  backgroundColor: "$siteBg",
+  variants: {
+    layout: {
+      desktop: { gridTemplateRows: "150px 1fr" },
+      mobile: { gridTemplateRows: "64px 1fr" },
+    },
+  },
 });
 
 export const PageLayout = ({ children }) => {
   return (
-    <GridBox mode="grid">
+    <GridBox
+      mode="grid"
+      layout={{
+        "@initial": "mobile",
+        "@m": "desktop",
+      }}
+    >
       <Navigation />
       {children}
       <Footer />
