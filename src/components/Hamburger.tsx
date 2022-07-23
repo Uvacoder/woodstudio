@@ -37,7 +37,7 @@ const BottomLine = styled("div", {
   },
 });
 
-const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
+export const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     const nextValue = !isOpen;

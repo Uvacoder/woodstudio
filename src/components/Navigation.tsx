@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { styled, theme } from "@styles/stitches.config";
+import { styled } from "@styles/stitches.config";
 
-import Box from "@components/Box";
-import Logo from "@components/Logo";
-import Hamburger from "@components/Hamburger";
+import { Box } from "@components/Box";
+import { Logo } from "@components/Logo";
+import { Hamburger } from "@components/Hamburger";
+import { Text } from "@components/Text";
 
 const GridBox = styled(Box, {
   alignItems: "center",
@@ -21,7 +22,7 @@ const GridBox = styled(Box, {
     },
     padding: {
       compact: { padding: "0 $2" },
-      comfortable: { padding: "0 $4" },
+      comfortable: { padding: "0 $5" },
     },
   },
   defaultVariants: {
@@ -36,7 +37,7 @@ const SpacedBox = styled(Box, {
       s: { gap: "$1" },
       m: { gap: "$2" },
       l: { gap: "$3" },
-      xl: { gap: "$4" },
+      xl: { gap: "$5" },
     },
   },
 });
@@ -60,9 +61,7 @@ const InstagramIcon = styled("img", {
 });
 
 const Anchor = styled("a", {
-  position: "relative",
-  color: theme.colors.black,
-  fontSize: 21,
+  color: "$black",
   textTransform: "uppercase",
   textDecoration: "none",
   "&:hover": {
@@ -70,14 +69,19 @@ const Anchor = styled("a", {
   },
 });
 
-const Navigation = () => {
+export const Navigation = () => {
   return (
     <GridBox
       mode="grid"
       padding={{ "@m": "comfortable" }}
       layout={{ "@m": "desktop" }}
     >
-      <Logo />
+      <Logo
+        size={{
+          "@initial": "small",
+          "@l": "large",
+        }}
+      />
       <Box display={{ "@initial": "show", "@m": "hide" }}>
         <Hamburger />
       </Box>
@@ -88,19 +92,25 @@ const Navigation = () => {
       >
         <SpacedBox
           mode="flex"
-          gap={{ "@initial": "l", "@lg": "xl" }}
+          gap={{ "@initial": "l", "@l": "xl" }}
           css={{
             flexDirection: "row",
           }}
         >
           <Link href="/work" passHref>
-            <Anchor>Work</Anchor>
+            <Anchor>
+              <Text size={{ "@initial": "3", "@l": "4" }}>Work</Text>
+            </Anchor>
           </Link>
           <Link href="/about" passHref>
-            <Anchor>About</Anchor>
+            <Anchor>
+              <Text size={{ "@initial": "3", "@l": "4" }}>About</Text>
+            </Anchor>
           </Link>
           <Link href="/contact" passHref>
-            <Anchor>Contact</Anchor>
+            <Anchor>
+              <Text size={{ "@initial": "3", "@l": "4" }}>Contact</Text>
+            </Anchor>
           </Link>
         </SpacedBox>
 
@@ -113,5 +123,3 @@ const Navigation = () => {
     </GridBox>
   );
 };
-
-export default Navigation;

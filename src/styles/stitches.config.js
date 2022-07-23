@@ -22,7 +22,8 @@ export const {
       1: "8px",
       2: "16px",
       3: "24px",
-      4: "48px",
+      4: "32px",
+      5: "48px",
     },
     sizes: {
       1: "8px",
@@ -31,10 +32,14 @@ export const {
       4: "48px",
     },
     fontSizes: {
-      h1: "42px",
-      h2: "30px",
-      resM: "2.5vw",
-      resL: "3.25vw",
+      1: "12px",
+      2: "14px",
+      3: "18px",
+      4: "21px",
+      5: "30px",
+      6: "42px",
+      r1: "2.5vw",
+      r2: "3.25vw",
     },
     fonts: {
       primary: '"Open Sauce Sans", sans-serif',
@@ -45,6 +50,6 @@ export const {
 
   media: {
     m: "(min-width: 600px)",
-    lg: "(min-width: 900px)",
+    l: "(min-width: 900px)",
   },
 });

@@ -1,8 +1,8 @@
 import { styled, theme } from "@styles/stitches.config";
 
-import Box from "@components/Box";
-import Navigation from "@components/Navigation";
-import Footer from "@components/Footer";
+import { Box } from "@components/Box";
+import { Navigation } from "@components/Navigation";
+import { Footer } from "@components/Footer";
 
 const GridBox = styled(Box, {
   gridTemplateColumns: "1fr",

@@ -1,6 +1,6 @@
 import { styled } from "@styles/stitches.config";
 
-const Box = styled("div", {
+export const Box = styled("div", {
   variants: {
     mode: {
       block: { display: "block" },
@@ -49,5 +49,3 @@ const Box = styled("div", {
     },
   ],
 });
-
-export default Box;

@@ -1,12 +1,11 @@
-import { ReactElement } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
 import { styled, theme } from "@styles/stitches.config";
 
-import Logo from "@components/Logo";
-import Navigation from "@components/Navigation";
-import Box from "@components/Box";
+import { Logo } from "@components/Logo";
+import { Navigation } from "@components/Navigation";
+import { Box } from "@components/Box";
 
 const IntroText = styled("h1", {
   marginBottom: "$3",
