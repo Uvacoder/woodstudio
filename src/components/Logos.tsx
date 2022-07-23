@@ -1,5 +1,13 @@
 import { styled } from "@styles/stitches.config";
 
+export const Logo = (props) => (
+  <LogoImage src="/logo.svg" alt="On End Studio" {...props} />
+);
+
+export const Avatar = (props) => (
+  <AvatarImage src="/avatar.svg" alt="" {...props} />
+);
+
 const LogoImage = styled("img", {
   variants: {
     size: {
@@ -17,11 +25,3 @@ const AvatarImage = styled("img", {
     },
   },
 });
-
-export const Logo = (props) => (
-  <LogoImage src="/logo.svg" alt="On End Studio" {...props} />
-);
-
-export const Avatar = (props) => (
-  <AvatarImage src="/avatar.svg" alt="" {...props} />
-);

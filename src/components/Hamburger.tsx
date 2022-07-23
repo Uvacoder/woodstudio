@@ -1,15 +1,32 @@
 import { useState } from "react";
-
 import { styled } from "@styles/stitches.config";
 
 interface HamburgerProps {
   onChange?: (boolean) => void;
 }
 
+export const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    const nextValue = !isOpen;
+    setIsOpen(nextValue);
+    onChange(nextValue);
+  };
+
+  return (
+    <Container onClick={handleClick}>
+      <TopLine position={isOpen ? "angled" : "flat"} />
+      <BottomLine position={isOpen ? "angled" : "flat"} />
+    </Container>
+  );
+};
+
 const Container = styled("div", {
   height: 32,
   width: 32,
 });
+
 const lineStyles = {
   backgroundColor: "$border",
   height: 1.5,
@@ -17,6 +34,7 @@ const lineStyles = {
   borderRadius: 2,
   transition: "all 200ms ease",
 };
+
 const TopLine = styled("div", {
   ...lineStyles,
   variants: {
@@ -26,6 +44,7 @@ const TopLine = styled("div", {
     },
   },
 });
+
 const BottomLine = styled("div", {
   ...lineStyles,
 
@@ -36,20 +55,3 @@ const BottomLine = styled("div", {
     },
   },
 });
-
-export const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    const nextValue = !isOpen;
-    setIsOpen(nextValue);
-    onChange(nextValue);
-  };
-  return (
-    <Container onClick={handleClick}>
-      <TopLine position={isOpen ? "angled" : "flat"} />
-      <BottomLine position={isOpen ? "angled" : "flat"} />
-    </Container>
-  );
-};
-
-export default Hamburger;

@@ -1,9 +1,7 @@
 import { styled } from "@styles/stitches.config";
 
 export const Text = styled("span", {
-  lineHeight: 1.4,
   margin: "0",
-  fontWeight: 400,
   fontVariantNumeric: "tabular-nums",
 
   variants: {
@@ -20,9 +18,65 @@ export const Text = styled("span", {
     color: {
       black: { color: "$black" },
     },
+    weight: {
+      light: { fontWeight: 300 },
+      normal: { fontWeight: 400 },
+      medium: { fontWeight: 500 },
+      semiBold: { fontWeight: 600 },
+      bold: { fontWeight: 700 },
+    },
+    lineHeight: {
+      none: { lineHeight: 1 },
+      tight: { lineHeight: 1.15 },
+      paragraph: { lineHeight: 1.4 },
+    },
+    style: {
+      normal: { fontStyle: "normal" },
+      italic: { fontStyle: "italic" },
+    },
+    transform: {
+      none: { textTransform: "none" },
+      uppercase: { textTransform: "uppercase" },
+    },
+    decoration: {
+      none: { textDecoration: "none" },
+      underline: { textDecoration: "underline" },
+      border: { textDecoration: "none", borderBottom: "2px solid $black" },
+    },
+    hover: {
+      true: {
+        "&:hover": {
+          textDecoration: "underline",
+        },
+      },
+    },
   },
+  compoundVariants: [
+    {
+      decoration: "border",
+      hover: true,
+      css: {
+        "&:hover": {
+          textDecoration: "none",
+          borderBottom: "none",
+        },
+      },
+    },
+    {
+      decoration: "underline",
+      hover: true,
+      css: {
+        textDecoration: "none",
+      },
+    },
+  ],
   defaultVariants: {
     size: "3",
+    weight: "normal",
+    lineHeight: "paragraph",
+    style: "normal",
+    transform: "none",
+    decoration: "none",
     color: "black",
   },
 });

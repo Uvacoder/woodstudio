@@ -1,8 +1,30 @@
-import { styled, theme } from "@styles/stitches.config";
+import { styled } from "@styles/stitches.config";
+
+import type { ReactNode } from "react";
 
 import { Box } from "@components/Box";
-import { Navigation } from "@components/Navigation";
+import { NavWithLogo as Navigation } from "@components/Navigation";
 import { Footer } from "@components/Footer";
+
+interface PageLayoutProps {
+  children?: ReactNode;
+}
+
+export const PageLayout = ({ children }: PageLayoutProps) => {
+  return (
+    <GridBox
+      mode="grid"
+      layout={{
+        "@initial": "mobile",
+        "@m": "desktop",
+      }}
+    >
+      <Navigation border />
+      {children}
+      <Footer border />
+    </GridBox>
+  );
+};
 
 const GridBox = styled(Box, {
   gridTemplateColumns: "1fr",
@@ -16,21 +38,3 @@ const GridBox = styled(Box, {
     },
   },
 });
-
-export const PageLayout = ({ children }) => {
-  return (
-    <GridBox
-      mode="grid"
-      layout={{
-        "@initial": "mobile",
-        "@m": "desktop",
-      }}
-    >
-      <Navigation />
-      {children}
-      <Footer />
-    </GridBox>
-  );
-};
-
-export default PageLayout;

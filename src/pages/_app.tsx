@@ -2,7 +2,7 @@ import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 
-import PageLayout from "@components/PageLayout";
+import { PageLayout } from "@components/PageLayout";
 
 import "@styles/fonts.css";
 import "@styles/reset.css";
@@ -16,7 +16,8 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page) => <PageLayout>{page}</PageLayout>);
+  const getLayout =
+    Component.getLayout ?? ((page) => <PageLayout>{page}</PageLayout>);
 
   return getLayout(<Component {...pageProps} />);
 }
