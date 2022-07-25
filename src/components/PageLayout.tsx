@@ -20,8 +20,10 @@ export const PageLayout = ({ children }: PageLayoutProps) => {
       }}
     >
       <Navigation border />
-      {children}
-      <Footer border />
+      <Box>
+        {children}
+        <Footer border />
+      </Box>
     </GridBox>
   );
 };
