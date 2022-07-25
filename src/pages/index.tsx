@@ -19,11 +19,11 @@ export default function Home() {
       <Head>
         <title>On End Studio</title>
       </Head>
-      <Box display={{ "@initial": "show", "@m": "hide" }}>
+      <Box display={{ "@initial": "show", "@m": "show" }}>
         <Photo
           src="/photos/coffeetable-front.jpg"
           alt="Coffee table"
-          aspect="threeOverTwo"
+          ratio={3 / 2}
           priority={true}
         />
       </Box>
@@ -55,7 +55,7 @@ export default function Home() {
 }
 
 Home.getLayout = (page: ReactElement) => {
-  if (isMobile) {
+  if (!isMobile) {
     return <PageLayout>{page}</PageLayout>;
   }
   return (
