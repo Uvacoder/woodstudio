@@ -55,7 +55,7 @@ export default function Home() {
 }
 
 Home.getLayout = (page: ReactElement) => {
-  if (!isMobile) {
+  if (isMobile) {
     return <PageLayout>{page}</PageLayout>;
   }
   return (
