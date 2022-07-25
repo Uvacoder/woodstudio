@@ -14,6 +14,8 @@ export const Text = styled("span", {
       6: { fontSize: "$6" },
       r1: { fontSize: "$r1" },
       r2: { fontSize: "$r2" },
+      r3: { fontSize: "$r3" },
+      r4: { fontSize: "$r4" },
     },
     color: {
       black: { color: "$black" },
@@ -71,7 +73,7 @@ export const Text = styled("span", {
     },
   ],
   defaultVariants: {
-    size: "3",
+    size: "2",
     weight: "normal",
     lineHeight: "paragraph",
     style: "normal",

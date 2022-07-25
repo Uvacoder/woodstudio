@@ -24,6 +24,7 @@ export const {
       3: "24px",
       4: "32px",
       5: "48px",
+      6: "64px",
     },
     sizes: {
       1: "8px",
@@ -40,6 +41,8 @@ export const {
       6: "42px",
       r1: "2.5vw",
       r2: "3.25vw",
+      r3: "5.5vw",
+      r4: "7vw",
     },
     fonts: {
       primary: '"Open Sauce Sans", sans-serif',

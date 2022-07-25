@@ -1,13 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
-
+import Image from "next/image";
+import { isMobile } from "react-device-detect";
 import type { ReactElement } from "react";
 
-import { styled, theme } from "@styles/stitches.config";
+import { styled } from "@styles/stitches.config";
 
 import { Logo } from "@components/Logos";
 import { Navigation } from "@components/Navigation";
+import { PageLayout } from "@components/PageLayout";
 import { Text } from "@components/Text";
+import { Photo } from "@components/Photo";
 import { Box } from "@components/Box";
 
 export default function Home() {
@@ -16,20 +19,45 @@ export default function Home() {
       <Head>
         <title>On End Studio</title>
       </Head>
-      <Text as="h1" size="r2" weight="light" css={{ marginBottom: "$3" }}>
-        Some really nice things for your home ✸ Made upright with care by Justin
-        Belcher in San Francisco.
-      </Text>
-      <Link href="/work" passHref>
-        <Text as="a" size="r1" weight="light" decoration="border" hover>
-          View my work ↗
+      <Box display={{ "@initial": "show", "@m": "hide" }}>
+        <Photo
+          src="/photos/coffeetable-front.jpg"
+          alt="Coffee table"
+          aspect="threeOverTwo"
+          priority={true}
+        />
+      </Box>
+
+      <ContentBox padding={{ "@initial": "compact", "@m": "comfortable" }}>
+        <Text
+          as="h1"
+          size={{ "@initial": "r4", "@m": "r2" }}
+          weight="light"
+          css={{ marginBottom: "$3" }}
+        >
+          Some really nice things for your home ✸ Made upright with care by
+          Justin Belcher in San Francisco.
         </Text>
-      </Link>
+        <Link href="/work" passHref>
+          <Text
+            as="a"
+            size={{ "@initial": "r3", "@m": "r1" }}
+            weight="light"
+            decoration="border"
+            hover
+          >
+            View my work ↗
+          </Text>
+        </Link>
+      </ContentBox>
     </>
   );
 }
 
 Home.getLayout = (page: ReactElement) => {
+  if (!isMobile) {
+    return <PageLayout>{page}</PageLayout>;
+  }
   return (
     <GridBox>
       <Box css={{ gridArea: "logo", alignSelf: "center", padding: "0 $4" }}>
@@ -42,8 +70,7 @@ Home.getLayout = (page: ReactElement) => {
         css={{
           gridArea: "intro",
           alignSelf: "end",
-          padding: "$4",
-          paddingBottom: 96,
+          paddingBottom: 32,
         }}
       >
         {page}
@@ -77,4 +104,13 @@ const GridBox = styled("div", {
   minHeight: "100%",
   fontFamily: "$primary",
   backgroundColor: "$siteBg",
+});
+
+const ContentBox = styled("div", {
+  variants: {
+    padding: {
+      compact: { padding: "$4 $2" },
+      comfortable: { padding: "$6 $4" },
+    },
+  },
 });
