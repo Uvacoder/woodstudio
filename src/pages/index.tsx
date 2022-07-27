@@ -35,7 +35,7 @@ export default function Home() {
           weight="light"
           css={{ marginBottom: "$3" }}
         >
-          Some really nice things for your home ✸ Made upright with care by
+          Some really nice things for your home ✷ Made upright with care by
           Justin Belcher in San Francisco.
         </Text>
         <Link href="/work" passHref>
@@ -46,7 +46,7 @@ export default function Home() {
             decoration="border"
             hover
           >
-            View my work ↗
+            View my work <ArrowIcon src="/arrow.svg" alt="" />
           </Text>
         </Link>
       </ContentBox>
@@ -120,4 +120,11 @@ const ContentBox = styled("div", {
       comfortable: { padding: "$6 $4" },
     },
   },
+});
+
+const ArrowIcon = styled("img", {
+  height: "0.65em",
+  display: "inline",
+  paddingTop: "0.05em",
+  paddingBottom: "0.1em",
 });

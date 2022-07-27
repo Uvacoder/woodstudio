@@ -50,7 +50,6 @@ export const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
 const Container = styled("div", {
   height: 35,
   width: 35,
-  // background: "red",
 });
 
 const lineStyles = {
@@ -91,6 +90,7 @@ const LinkBox = styled(Box, {
   backgroundColor: "$tan",
   overflow: "hidden",
   transition: "all 200ms ease",
+  willChange: "auto",
   userSelect: "none",
 });
 
