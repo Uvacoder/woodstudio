@@ -48,10 +48,12 @@ const FlexBox = styled(Box, {
   variants: {
     padding: {
       compact: { padding: "$3 $2" },
-      comfortable: { padding: "$4 $5" },
+      comfortable: { padding: "$4 $4" },
     },
     border: {
       true: { borderTop: "1px solid $border" },
     },
   },
 });
+// compact: { padding: "$4 $2" },
+// comfortable: { padding: "$6 $4" },
