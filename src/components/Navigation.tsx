@@ -91,7 +91,7 @@ const GridBox = styled(Box, {
     },
     padding: {
       compact: { padding: "0 $2" },
-      comfortable: { padding: "0 $5" },
+      comfortable: { padding: "0 $4" },
     },
     border: {
       true: { borderBottom: "1px solid $black" },

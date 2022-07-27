@@ -17,20 +17,20 @@ export const Footer = ({ border = false }: FooterProps) => {
       border={border}
     >
       <Box>
-        <Text as="p" css={{ marginBottom: "$3" }}>
+        <Text as="p" size="3" css={{ marginBottom: "$2" }}>
           contact
           <br />
           <Link href="mailto:hi@onend.studio" passHref>
-            <Text as="a" decoration="underline" hover>
+            <Text as="a" size="3" decoration="underline" hover>
               hi@onend.studio
             </Text>
           </Link>
         </Text>
-        <Text as="p">
+        <Text as="p" size="3">
           instagram
           <br />
           <Link href="http://instagram.com/onendstudio" passHref>
-            <Text as="a" decoration="underline" hover>
+            <Text as="a" size="3" decoration="underline" hover>
               @onendstudio
             </Text>
           </Link>
@@ -48,10 +48,12 @@ const FlexBox = styled(Box, {
   variants: {
     padding: {
       compact: { padding: "$3 $2" },
-      comfortable: { padding: "$4 $5" },
+      comfortable: { padding: "$4 $4" },
     },
     border: {
       true: { borderTop: "1px solid $border" },
     },
   },
 });
+// compact: { padding: "$4 $2" },
+// comfortable: { padding: "$6 $4" },

@@ -48,24 +48,24 @@ export const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
 };
 
 const Container = styled("div", {
-  height: 32,
-  width: 32,
+  height: 35,
+  width: 35,
 });
 
 const lineStyles = {
   backgroundColor: "$border",
-  height: 1.5,
-  width: 24,
+  height: 1,
   borderRadius: 2,
-  transition: "transform 200ms ease",
+  transition: "all 200ms ease",
+  willChange: "transform",
 };
 
 const TopLine = styled("div", {
   ...lineStyles,
   variants: {
     position: {
-      flat: { transform: "translate(4px, 10px) rotate(0)" },
-      angled: { transform: "translate(4px, 16px) rotate(-135deg)" },
+      flat: { width: 35, transform: "translate(0px, 13px) rotate(0)" },
+      angled: { width: 24, transform: "translate(6px, 17px) rotate(-135deg)" },
     },
   },
 });
@@ -75,8 +75,8 @@ const BottomLine = styled("div", {
 
   variants: {
     position: {
-      flat: { transform: "translate(4px, 20px) rotate(0)" },
-      angled: { transform: "translate(4px, 14px) rotate(135deg)" },
+      flat: { width: 35, transform: "translate(0px, 21px) rotate(0)" },
+      angled: { width: 24, transform: "translate(6px, 16px) rotate(135deg)" },
     },
   },
 });
@@ -90,6 +90,7 @@ const LinkBox = styled(Box, {
   backgroundColor: "$tan",
   overflow: "hidden",
   transition: "all 200ms ease",
+  willChange: "auto",
   userSelect: "none",
 });
 
