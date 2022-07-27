@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { isMobile } from "react-device-detect";
 import type { ReactElement } from "react";
 
@@ -12,14 +13,13 @@ import { Text } from "@components/Text";
 import { Photo } from "@components/Photo";
 import { Box } from "@components/Box";
 
-export default function Home() {
+export default function Work() {
   return (
     <>
       <Head>
-        <title>On End Studio</title>
+        <title>Work | On End Studio</title>
       </Head>
-
-      <Box display={{ "@initial": "show", "@m": "hide" }}>
+      <Box display={{ "@initial": "show", "@m": "show" }}>
         <Photo
           src="/photos/coffeetable-front.jpg"
           alt="Coffee table"
@@ -53,55 +53,6 @@ export default function Home() {
     </>
   );
 }
-
-Home.getLayout = (page: ReactElement) => {
-  return (
-    <>
-      {/* Custom desktop layout */}
-      <Box display={{ "@initial": "hide", "@m": "show" }}>
-        <GridBox>
-          <Box css={{ gridArea: "logo", alignSelf: "center", padding: "0 $4" }}>
-            <Logo size="large" />
-          </Box>
-          <Box css={{ gridArea: "nav", alignSelf: "center", padding: "0 $4" }}>
-            <Navigation />
-          </Box>
-          <Box
-            css={{
-              gridArea: "intro",
-              alignSelf: "end",
-              paddingBottom: 32,
-            }}
-          >
-            {page}
-          </Box>
-          <Box
-            css={{
-              gridArea: "separator",
-              backgroundColor: "$border",
-              height: "100vh",
-            }}
-          />
-          <Box
-            css={{
-              gridArea: "lede",
-              height: "100%",
-              background:
-                "url(/photos/coffeetable-intro.jpg) center center no-repeat",
-              backgroundSize: "cover",
-              borderTop: "1px solid $border",
-            }}
-          />
-        </GridBox>
-      </Box>
-
-      {/* Mobile fallback */}
-      <Box display={{ "@initial": "show", "@m": "hide" }}>
-        <PageLayout>{page}</PageLayout>
-      </Box>
-    </>
-  );
-};
 
 const GridBox = styled("div", {
   display: "grid",

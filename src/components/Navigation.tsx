@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { styled } from "@styles/stitches.config";
 
+import { routes } from "@lib/routes";
+
 import { Box } from "@components/Box";
 import { Logo } from "@components/Logos";
 import { Hamburger } from "@components/Hamburger";
@@ -11,6 +13,16 @@ interface NavWithLogoProps {
 }
 
 export const Navigation = () => {
+  const links = routes.slice(0, -1).map(({ title, slug }, i) => {
+    return (
+      <Link key={i} href={slug} passHref>
+        <Text as="a" size={{ "@initial": "3", "@l": "4" }} hover>
+          {title}
+        </Text>
+      </Link>
+    );
+  });
+
   return (
     <>
       <Box display={{ "@initial": "show", "@m": "hide" }}>
@@ -28,24 +40,10 @@ export const Navigation = () => {
             flexDirection: "row",
           }}
         >
-          <Link href="/work" passHref>
-            <Text as="a" size={{ "@initial": "3", "@l": "4" }} hover>
-              Work
-            </Text>
-          </Link>
-          <Link href="/about" passHref>
-            <Text as="a" size={{ "@initial": "3", "@l": "4" }} hover>
-              About
-            </Text>
-          </Link>
-          <Link href="/contact" passHref>
-            <Text as="a" size={{ "@initial": "3", "@l": "4" }} hover>
-              Contact
-            </Text>
-          </Link>
+          {links}
         </SpacedBox>
 
-        <Link href="https://www.instagram.com/onendstudio">
+        <Link href={routes[routes.length - 1].slug}>
           <a>
             <InstagramIcon src="/instagram.svg" alt="Instagram" />
           </a>
@@ -63,12 +61,16 @@ export const NavWithLogo = ({ border = false }: NavWithLogoProps) => {
       layout={{ "@m": "desktop" }}
       border={border}
     >
-      <Logo
-        size={{
-          "@initial": "small",
-          "@l": "large",
-        }}
-      />
+      <Link href="/">
+        <a>
+          <Logo
+            size={{
+              "@initial": "small",
+              "@l": "large",
+            }}
+          />
+        </a>
+      </Link>
       <Navigation />
     </GridBox>
   );

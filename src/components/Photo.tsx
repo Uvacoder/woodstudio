@@ -1,20 +1,23 @@
 import Image from "next/image";
-import { styled } from "@styles/stitches.config";
-import type { ComponentProps, VariantProps } from "@stitches/react";
+
+import { Box } from "@components/Box";
 
 interface PhotoProps {
   src: string;
   alt: string;
   priority?: boolean;
-  aspect: any;
+  ratio?: number;
 }
-
-// export type WrapperVariants = ComponentProps<typeof PhotoWrapper> &
-//   VariantProps<typeof PhotoWrapper>;
-
-export const Photo = ({ src, alt, aspect, priority = false }: PhotoProps) => {
+export const Photo = ({
+  src,
+  alt,
+  ratio = 1 / 1,
+  priority = false,
+}: PhotoProps) => {
   return (
-    <PhotoWrapper aspect={aspect}>
+    <Box
+      css={{ position: "relative", width: "100vw", height: `${100 / ratio}vw` }}
+    >
       <Image
         src={src}
         alt={alt}
@@ -22,17 +25,6 @@ export const Photo = ({ src, alt, aspect, priority = false }: PhotoProps) => {
         objectFit="cover"
         priority={priority}
       />
-    </PhotoWrapper>
+    </Box>
   );
 };
-
-const PhotoWrapper = styled("div", {
-  position: "relative",
-  variants: {
-    aspect: {
-      square: { width: "100vw", height: "100vw" },
-      widescreen: { width: "100vw", height: "56.25vw" },
-      threeOverTwo: { width: "100vw", height: "66.66vw" },
-    },
-  },
-});
