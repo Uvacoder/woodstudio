@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import { isMobile } from "react-device-detect";
 import type { ReactElement } from "react";
 
@@ -19,6 +18,7 @@ export default function Home() {
       <Head>
         <title>On End Studio</title>
       </Head>
+
       <Box display={{ "@initial": "show", "@m": "hide" }}>
         <Photo
           src="/photos/coffeetable-front.jpg"
@@ -55,44 +55,51 @@ export default function Home() {
 }
 
 Home.getLayout = (page: ReactElement) => {
-  // if (isMobile) {
-  //   return <PageLayout>{page}</PageLayout>;
-  // }
   return (
-    <GridBox>
-      <Box css={{ gridArea: "logo", alignSelf: "center", padding: "0 $4" }}>
-        <Logo size="large" />
+    <>
+      {/* Custom desktop layout */}
+      <Box display={{ "@initial": "hide", "@m": "show" }}>
+        <GridBox>
+          <Box css={{ gridArea: "logo", alignSelf: "center", padding: "0 $4" }}>
+            <Logo size="large" />
+          </Box>
+          <Box css={{ gridArea: "nav", alignSelf: "center", padding: "0 $4" }}>
+            <Navigation />
+          </Box>
+          <Box
+            css={{
+              gridArea: "intro",
+              alignSelf: "end",
+              paddingBottom: 32,
+            }}
+          >
+            {page}
+          </Box>
+          <Box
+            css={{
+              gridArea: "separator",
+              backgroundColor: "$border",
+              height: "100vh",
+            }}
+          />
+          <Box
+            css={{
+              gridArea: "lede",
+              height: "100%",
+              background:
+                "url(/photos/coffeetable-intro.jpg) center center no-repeat",
+              backgroundSize: "cover",
+              borderTop: "1px solid $border",
+            }}
+          />
+        </GridBox>
       </Box>
-      <Box css={{ gridArea: "nav", alignSelf: "center", padding: "0 $4" }}>
-        <Navigation />
+
+      {/* Mobile fallback */}
+      <Box display={{ "@initial": "show", "@m": "hide" }}>
+        <PageLayout>{page}</PageLayout>
       </Box>
-      <Box
-        css={{
-          gridArea: "intro",
-          alignSelf: "end",
-          paddingBottom: 32,
-        }}
-      >
-        {page}
-      </Box>
-      <Box
-        css={{
-          gridArea: "separator",
-          backgroundColor: "$border",
-          height: "100vh",
-        }}
-      />
-      <Box
-        css={{
-          gridArea: "lede",
-          height: "100%",
-          background:
-            "url(/photos/coffeetable-intro.jpg) center center no-repeat",
-          backgroundSize: "cover",
-          borderTop: "1px solid $border",
-        }}
-      />
-    </GridBox>
+    </>
   );
 };
 

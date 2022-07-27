@@ -22,9 +22,9 @@ export const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
     onChange(nextValue);
   };
 
-  const links = routes.map(({ title, slug }) => {
+  const links = routes.map(({ title, slug }, i) => {
     return (
-      <Link href={slug} passHref>
+      <Link key={i} href={slug} passHref>
         <LinkRow>
           <Text as="a" size="3">
             {title}

@@ -13,9 +13,9 @@ interface NavWithLogoProps {
 }
 
 export const Navigation = () => {
-  const links = routes.slice(0, -1).map(({ title, slug }) => {
+  const links = routes.slice(0, -1).map(({ title, slug }, i) => {
     return (
-      <Link href={slug} passHref>
+      <Link key={i} href={slug} passHref>
         <Text as="a" size={{ "@initial": "3", "@l": "4" }} hover>
           {title}
         </Text>
