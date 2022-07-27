@@ -35,7 +35,7 @@ export default function Home() {
           weight="light"
           css={{ marginBottom: "$3" }}
         >
-          Some really nice things for your home ✸ Made upright with care by
+          Some really nice things for your home ✺ Made upright with care by
           Justin Belcher in San Francisco.
         </Text>
         <Link href="/work" passHref>
