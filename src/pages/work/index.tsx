@@ -1,14 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
-import { isMobile } from "react-device-detect";
-import type { ReactElement } from "react";
 
 import { styled } from "@styles/stitches.config";
 
-import { Logo } from "@components/Logos";
-import { Navigation } from "@components/Navigation";
-import { PageLayout } from "@components/PageLayout";
 import { Text } from "@components/Text";
 import { Photo } from "@components/Photo";
 import { Box } from "@components/Box";
@@ -53,16 +47,6 @@ export default function Work() {
     </>
   );
 }
-
-const GridBox = styled("div", {
-  display: "grid",
-  gridTemplateRows: "150px 1fr",
-  gridTemplateColumns: "1fr 1px 1fr",
-  gridTemplateAreas: "'logo separator nav' 'intro separator lede'",
-  minHeight: "100%",
-  fontFamily: "$primary",
-  backgroundColor: "$siteBg",
-});
 
 const ContentBox = styled("div", {
   variants: {
