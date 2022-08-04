@@ -6,11 +6,11 @@ import { Box } from "@components/Box";
 import { NavWithLogo as Navigation } from "@components/Navigation";
 import { Footer } from "@components/Footer";
 
-interface PageLayoutProps {
+interface LayoutProps {
   children?: ReactNode;
 }
 
-export const PageLayout = ({ children }: PageLayoutProps) => {
+export const PageLayout = ({ children }: LayoutProps) => {
   return (
     <GridBox
       mode="grid"

@@ -16,7 +16,7 @@ export const Photo = ({
 }: PhotoProps) => {
   return (
     <Box
-      css={{ position: "relative", width: "100vw", height: `${100 / ratio}vw` }}
+      css={{ position: "relative", width: "100%", height: `${100 / ratio}%` }}
     >
       <Image
         src={src}
