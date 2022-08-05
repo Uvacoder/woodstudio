@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { getAllProjects } from "@lib/api";
+import type { ProjectType } from "@typings/project";
 
-export default function Index({ projects }) {
+type Props = {
+  projects: ProjectType[];
+};
+
+export default function Index({ projects }: Props) {
   return (
     <ul>
       {projects.map((project) => (

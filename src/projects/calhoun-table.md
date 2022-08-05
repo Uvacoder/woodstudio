@@ -5,7 +5,10 @@ clients: ""
 materials: ["walnut", "brass", "glass"]
 price: "$2750"
 photos:
-  - "/photos/coffeetable-intro.jpg"
+  - src: "/photos/coffeetable-intro.jpg"
+    alt: ""
+  - src: "/photos/coffeetable-intro.jpg"
+    alt: ""
 ---
 
 Midcentury coffee table in walnut and glass for Edward and Christine. This kinda turned into my

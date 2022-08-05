@@ -1,23 +1,23 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import type { ProjectType } from "@typings/project";
 
 const projectsDirectory = join(process.cwd(), "src/projects");
 
-export const getSlugs = () => {
+export const getSlugs = (): string[] => {
   return fs.readdirSync(projectsDirectory).map((d) => d.replace(/\.md$/, ""));
 };
 
-export const getProjectBySlug = (slug: string, fields: string[] = []) => {
+export const getProjectBySlug = (
+  slug: string,
+  fields: string[] = []
+): ProjectType => {
   const file = join(projectsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(file, "utf8");
   const { data, content } = matter(fileContents);
 
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
+  const items: ProjectType = {};
 
   fields.forEach((field) => {
     if (field === "slug") {
@@ -34,7 +34,7 @@ export const getProjectBySlug = (slug: string, fields: string[] = []) => {
   return items;
 };
 
-export const getAllProjects = (fields: string[] = []) => {
+export const getAllProjects = (fields: string[] = []): ProjectType[] => {
   const slugs = getSlugs();
   const projects = slugs
     .map((slug) => getProjectBySlug(slug, fields))

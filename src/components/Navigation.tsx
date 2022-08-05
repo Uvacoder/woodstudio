@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { styled } from "@styles/stitches.config";
 
-import { routes } from "@lib/routes";
+import { routes } from "@lib/constants";
 
 import { Box } from "@components/Box";
 import { Logo } from "@components/Logos";

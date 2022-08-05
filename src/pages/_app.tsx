@@ -6,6 +6,7 @@ import { PageLayout } from "@components/PageLayout";
 
 import "@styles/fonts.css";
 import "@styles/reset.css";
+import "@styles/embla.css";
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
