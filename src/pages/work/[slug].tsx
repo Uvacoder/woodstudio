@@ -1,7 +1,11 @@
+import { Box } from "@components/Box";
 import { Carousel } from "@components/Carousel";
+import { Text } from "@components/Text";
 
 import { getProjectBySlug, getAllProjects } from "@lib/api";
 import { markdownToHtml } from "@lib/markdown";
+
+import { styled } from "@styles/stitches.config";
 
 import type { ProjectType } from "@typings/project";
 
@@ -9,21 +13,118 @@ type Props = {
   project: ProjectType;
 };
 
+export default function Project({ project }: Props) {
+  const { title, photos, content, materials, clients } = project;
+  return (
+    <Grid mode="grid" layout={{ "@initial": "mobile", "@m": "desktop" }}>
+      <Carousel photos={photos} />
+      <Box
+        css={{
+          width: 1,
+          height: "100%",
+          backgroundColor: "$border",
+        }}
+      />
+      <Meta
+        mode="flex"
+        padding={{ "@initial": "compact", "@m": "comfortable" }}
+      >
+        <Header mode="flex" layout={{ "@initial": "stacked", "@m": "spread" }}>
+          <Text as="h1" size="5" css={{ fontWeight: 300, fontStyle: "italic" }}>
+            {title}
+          </Text>
+          <Text size="5" css={{ fontWeight: 300 }}>
+            2020
+          </Text>
+        </Header>
+        <Description
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></Description>
+        {materials && (
+          <MetaRow mode="flex">
+            <Text
+              size="3"
+              css={{ textTransform: "uppercase", fontWeight: 500 }}
+            >
+              Materials
+            </Text>
+            <Text>{materials.join(", ")}</Text>
+          </MetaRow>
+        )}
+
+        {clients && (
+          <MetaRow mode="flex">
+            <Text
+              size="3"
+              css={{ textTransform: "uppercase", fontWeight: 500 }}
+            >
+              Clients
+            </Text>
+            <Text>{clients}</Text>
+          </MetaRow>
+        )}
+      </Meta>
+    </Grid>
+  );
+}
+
+const Grid = styled(Box, {
+  gridTemplateRows: "1fr",
+  variants: {
+    layout: {
+      desktop: { gridTemplateColumns: "1fr 1px 1fr" },
+      mobile: { gridTempalteColumns: "1fr" },
+    },
+  },
+});
+const Meta = styled(Box, {
+  flexDirection: "column",
+  fontFamily: "IBM Plex Mono",
+  marginBottom: "$4",
+  variants: {
+    padding: {
+      compact: { padding: "0 $2" },
+      comfortable: { padding: "0 $4" },
+    },
+  },
+});
+
+const Header = styled(Box, {
+  padding: "$3 0",
+  borderBottom: "1px solid $border",
+  variants: {
+    layout: {
+      spread: {
+        justifyContent: "space-between",
+        flexDirection: "row",
+        alignItems: "center",
+      },
+      stacked: {
+        justifyContent: "start",
+        flexDirection: "column",
+        alignItems: "start",
+      },
+    },
+  },
+});
+
+const Description = styled(Box, {
+  padding: "$3 0",
+  marginBottom: "$1",
+  borderBottom: "1px solid $border",
+});
+
+const MetaRow = styled(Box, {
+  marginTop: "$2",
+  justifyContent: "space-between",
+  alignItems: "center",
+});
+
 type Params = {
   params: {
     slug: string;
   };
 };
-
-export default function Project({ project }: Props) {
-  return (
-    <>
-      <Carousel photos={project.photos} />
-      <h1>{project.title}</h1>
-      <section dangerouslySetInnerHTML={{ __html: project.content }}></section>
-    </>
-  );
-}
 
 export const getStaticProps = async ({ params }: Params) => {
   const project = getProjectBySlug(params.slug, [

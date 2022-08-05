@@ -1,13 +1,13 @@
 ---
 title: "Calhoun Coffee Table"
 date: "2021-03-20"
-clients: ""
-materials: ["walnut", "brass", "glass"]
+clients: "Edward and Christine"
+materials: ["Walnut", "brass", "glass"]
 price: "$2750"
 photos:
   - src: "/photos/coffeetable-intro.jpg"
     alt: ""
-  - src: "/photos/coffeetable-intro.jpg"
+  - src: "/photos/coffeetable-front.jpg"
     alt: ""
 ---
 

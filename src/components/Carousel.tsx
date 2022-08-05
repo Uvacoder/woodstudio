@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import AutoHeight from "embla-carousel-auto-height";
 
 import { Box } from "@components/Box";
 
@@ -37,7 +36,7 @@ export const Carousel = ({ photos, options = { loop: false } }: Props) => {
       <Viewport ref={viewportRef}>
         <Container mode="flex">
           {photos.map((photo, i) => (
-            <Slide key={i} css={{ height: 300 }}>
+            <Slide key={i}>
               <img src={photo.src} alt={photo.alt} />
             </Slide>
           ))}
@@ -51,9 +50,7 @@ export const Carousel = ({ photos, options = { loop: false } }: Props) => {
 
 const Embla = styled(Box, {
   position: "relative",
-  backgroundColor: "#f7f7f7",
-  padding: 20,
-  maxWidth: 670,
+  width: "100%",
   marginLeft: "auto",
   marginRight: "auto",
 });
@@ -82,7 +79,8 @@ const Slide = styled(Box, {
   flex: "0 0 100%",
   maxWidth: "100%",
   marginLeft: 10,
-  height: 300,
+  height: "60vh",
+
   "& img": {
     width: "100%",
     height: "100%",
@@ -96,28 +94,66 @@ type ButtonProps = {
 };
 
 const PrevButton = ({ enabled, onClick }: ButtonProps) => (
-  <button
-    className="embla__button embla__button--prev"
-    onClick={onClick}
-    disabled={!enabled}
-  >
-    <svg className="embla__button__svg" viewBox="137.718 -1.001 366.563 644">
-      <path d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z" />
+  <Button className="prev" onClick={onClick} disabled={!enabled}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      width="24"
+      viewBox="0 0 48 48"
+    >
+      <path d="m32.75 44-20-20 20-20 2.8 2.85L18.4 24l17.15 17.15Z" />
     </svg>
-  </button>
+  </Button>
 );
 
 const NextButton = ({ enabled, onClick }: ButtonProps) => (
-  <button
-    className="embla__button embla__button--next"
-    onClick={onClick}
-    disabled={!enabled}
-  >
-    <svg className="embla__button__svg" viewBox="0 0 238.003 238.003">
-      <path d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z" />
+  <Button className="next" onClick={onClick} disabled={!enabled}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      width="24"
+      viewBox="0 0 48 48"
+    >
+      <path d="m15.2 43.9-2.8-2.85L29.55 23.9 12.4 6.75l2.8-2.85 20 20Z" />
     </svg>
-  </button>
+  </Button>
 );
+
+const Button = styled("button", {
+  display: "flex",
+  outline: 0,
+  cursor: "pointer",
+  backgroundColor: "rgba(0,0,0,0.12)",
+  touchAction: "manipulation",
+  position: "absolute",
+  zIndex: 1,
+  top: "50%",
+  transform: "translateY(-50%)",
+  border: 0,
+  width: 44,
+  height: 60,
+  justifyContent: "center",
+  alignItems: "center",
+  fill: "#fff",
+  padding: 0,
+
+  "&:hover": {
+    backgroundColor: "rgba(0,0,0,0.2)",
+  },
+
+  "&:disabled": {
+    cursor: "default",
+    opacity: 0.3,
+  },
+
+  "&.prev": {
+    left: 0,
+  },
+
+  "&.next": {
+    right: 0,
+  },
+});
 
 type ThumbProps = {
   selected: boolean;

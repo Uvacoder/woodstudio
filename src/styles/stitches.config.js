@@ -17,6 +17,7 @@ export const {
 
       siteBg: "$tan",
       border: "$black",
+      borderLight: "#bbb2b2",
       tanHover: "#e4e0db",
     },
     space: {
