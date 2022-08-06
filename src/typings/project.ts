@@ -7,6 +7,8 @@ export type ProjectType = {
   materials?: string[];
   price?: string;
   photos?: PhotoType[];
+  thumb?: string;
+  cover?: string;
   slug?: string;
   content?: string;
 };

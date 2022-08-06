@@ -14,7 +14,10 @@ type Props = {
 };
 
 export default function Project({ project }: Props) {
-  const { title, photos, content, materials, clients } = project;
+  const { title, photos, content, materials, date, clients } = project;
+
+  const year = new Date(date).getFullYear();
+
   return (
     <Grid mode="grid" layout={{ "@initial": "mobile", "@m": "desktop" }}>
       <Carousel photos={photos} />
@@ -34,7 +37,7 @@ export default function Project({ project }: Props) {
             {title}
           </Text>
           <Text size="5" css={{ fontWeight: 300 }}>
-            2020
+            {year}
           </Text>
         </Header>
         <Description
