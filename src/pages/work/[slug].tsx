@@ -82,7 +82,7 @@ const Grid = styled(Box, {
 });
 const Meta = styled(Box, {
   flexDirection: "column",
-  fontFamily: "IBM Plex Mono",
+  fontFamily: "$secondary",
   marginBottom: "$4",
   variants: {
     padding: {

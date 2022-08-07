@@ -48,7 +48,7 @@ export const {
     },
     fonts: {
       primary: '"Open Sauce Sans", sans-serif',
-      secondary: '"Open Sauce Sans", sans-serif',
+      secondary: '"IBM Plex Mono", monospace',
     },
   },
   utils: {},

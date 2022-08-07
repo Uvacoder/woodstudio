@@ -8,7 +8,6 @@ import { Logo } from "@components/Logos";
 import { Navigation } from "@components/Navigation";
 import { PageLayout } from "@components/PageLayout";
 import { Text } from "@components/Text";
-import { Photo } from "@components/Photo";
 import { Box } from "@components/Box";
 
 export default function Home() {
@@ -19,12 +18,7 @@ export default function Home() {
       </Head>
 
       <Box display={{ "@initial": "show", "@m": "hide" }}>
-        <Photo
-          src="/photos/coffeetable-front.jpg"
-          alt="Coffee table"
-          ratio={3 / 2}
-          priority={true}
-        />
+        <img src="/photos/coffeetable-front.jpg" alt="Coffee table" />
       </Box>
 
       <ContentBox padding={{ "@initial": "compact", "@m": "comfortable" }}>
