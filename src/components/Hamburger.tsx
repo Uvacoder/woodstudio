@@ -22,10 +22,14 @@ export const Hamburger = ({ onChange = () => {} }: HamburgerProps) => {
     onChange(nextValue);
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   const links = routes.map(({ title, slug }, i) => {
     return (
       <Link key={i} href={slug} passHref>
-        <LinkRow>
+        <LinkRow onClick={handleClose}>
           <Text as="a" size="3">
             {title}
           </Text>

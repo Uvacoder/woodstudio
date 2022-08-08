@@ -1,5 +1,5 @@
 import { Box } from "@components/Box";
-
+import { Image } from "@components/Image";
 import { styled } from "@styles/stitches.config";
 
 type ButtonProps = {
@@ -77,9 +77,9 @@ type ThumbProps = {
 };
 
 export const Thumb = ({ selected, onClick, src, alt = "" }: ThumbProps) => (
-  <Slide className={`${selected ? "is-selected" : ""}`}>
+  <Slide className={selected ? "is-selected" : ""}>
     <Thumbnail type="button" onClick={onClick}>
-      <img className="embla__slide__thumbnail" src={src} alt={alt} />
+      <Image className="embla__slide__thumbnail" src={src} alt={alt} />
     </Thumbnail>
   </Slide>
 );
@@ -87,8 +87,7 @@ export const Thumb = ({ selected, onClick, src, alt = "" }: ThumbProps) => (
 const Slide = styled(Box, {
   position: "relative",
   paddingRight: 6,
-  minWidth: `15%`,
-
+  minWidth: "22%",
   "& img": {
     width: "100%",
     height: "100%",

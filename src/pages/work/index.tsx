@@ -4,6 +4,7 @@ import { styled } from "@styles/stitches.config";
 
 import { Box } from "@components/Box";
 import { Text } from "@components/Text";
+import { Image } from "@components/Image";
 
 import type { ProjectType } from "@typings/project";
 
@@ -31,7 +32,12 @@ export default function Index({ projects }: Props) {
                   {project.title}
                 </Text>
               </Title>
-              <Cover src={project.cover} alt={project.title} />
+              <Image
+                aspect="square"
+                cover
+                src={project.cover}
+                alt={project.title}
+              />
             </Card>
           </a>
         </Link>
@@ -79,10 +85,6 @@ const Title = styled(Box, {
     fontStyle: "italic",
     color: "white",
   },
-});
-const Cover = styled("img", {
-  aspectRatio: 1,
-  objectFit: "cover",
 });
 
 export function getStaticProps() {
