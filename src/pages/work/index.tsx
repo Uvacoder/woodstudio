@@ -58,8 +58,8 @@ const WorkGrid = styled(Box, {
       mobile: { gridTemplateColumns: " 1fr" },
     },
     padding: {
-      comfortable: { gridGap: "$1", padding: "$4" },
-      compact: { gridGap: "$2", padding: "$2" },
+      comfortable: { padding: "$4" },
+      compact: { padding: "0" },
     },
   },
 });

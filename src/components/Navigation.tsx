@@ -62,7 +62,7 @@ export const NavWithLogo = ({ border = false }: NavWithLogoProps) => {
       border={border}
     >
       <Link href="/">
-        <a>
+        <a style={{ justifySelf: "start" }}>
           <Logo
             size={{
               "@initial": "small",
