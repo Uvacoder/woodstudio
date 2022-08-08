@@ -59,7 +59,7 @@ const WorkGrid = styled(Box, {
     },
     padding: {
       comfortable: { padding: "$4" },
-      compact: { padding: "0" },
+      compact: { padding: "$1" },
     },
   },
 });
