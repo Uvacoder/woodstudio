@@ -88,6 +88,6 @@ const Title = styled(Box, {
 });
 
 export function getStaticProps() {
-  const projects = getAllProjects(["slug", "title", "cover"]);
+  const projects = getAllProjects(["slug", "title", "cover", "date"]);
   return { props: { projects } };
 }
