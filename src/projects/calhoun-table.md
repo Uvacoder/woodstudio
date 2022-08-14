@@ -5,7 +5,7 @@ clients: "Edward and Christine"
 materials: ["Walnut", "brass", "glass"]
 price: "$2750"
 thumbnail: ""
-cover: "/photos/coffeetable-intro.jpg"
+cover: "/coffeetable-intro.jpg"
 photos:
   - src: "/photos/coffeetable01.jpg"
     alt: "Front view of walnut coffee table"

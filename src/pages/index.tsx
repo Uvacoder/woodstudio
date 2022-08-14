@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
 
       <Box display={{ "@initial": "show", "@m": "hide" }}>
-        <Image src="/photos/coffeetable-front.jpg" alt="Coffee table" />
+        <Image src="/coffeetable-front.jpg" alt="Coffee table" />
       </Box>
 
       <ContentBox padding={{ "@initial": "compact", "@m": "comfortable" }}>
@@ -80,8 +80,7 @@ Home.getLayout = (page: ReactElement) => {
             css={{
               gridArea: "lede",
               height: "100%",
-              background:
-                "url(/photos/coffeetable-intro.jpg) center center no-repeat",
+              background: "url(/coffeetable-intro.jpg) center center no-repeat",
               backgroundSize: "cover",
               borderTop: "1px solid $border",
             }}

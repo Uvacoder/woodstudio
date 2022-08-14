@@ -25,6 +25,8 @@ photos:
     alt: "Art and shelves"
   - src: "/photos/small09.jpg"
     alt: "Round plant stand"
+  - src: "/photos/small10.jpg"
+    alt: "Vintage butcher block rebuild"
 ---
 
 Midcentury coffee table in walnut and glass for Edward and Christine. This kinda turned into my

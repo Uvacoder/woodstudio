@@ -1,14 +1,21 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rm -rf public/photos",
+    "thumbs": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":50}' --resize '{\"enabled\": true, \"width\":200}' -d build src/images/* -s '-thumb'",
+    "mobile": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":50}' --resize '{\"width\":640}' -d public/photos src/images/* -s '-mobile'",
+    "images": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":30}' --resize '{\"width\":1440}' -d public/photos src/images/*"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
     "embla-carousel-react": "^6.2.0",
+    "g": "^2.0.1",
     "gray-matter": "^4.0.3",
+    "imagemin-webp": "^7.0.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
