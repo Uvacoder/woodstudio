@@ -5,11 +5,11 @@ clients: "Edward and Christine"
 materials: ["Walnut", "oiled steel"]
 price: "$2750"
 thumbnail: ""
-cover: "/photos/dining-table01.jpg"
+cover: "/photos/dining-table01-640w"
 photos:
-  - src: "/photos/dining-table01.jpg"
+  - src: "/photos/dining-table01"
     alt: "View of live edge dining table and chairs"
-  - src: "/photos/dining-table02.jpg"
+  - src: "/photos/dining-table02"
     alt: "detail of live edge dining table"
 ---
 

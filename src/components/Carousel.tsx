@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 
 import { Box } from "@components/Box";
+import { Picture } from "@components/Picture";
 import { PrevButton, NextButton, Thumb } from "@components/CarouselControls";
 import { styled } from "@styles/stitches.config";
 
@@ -57,7 +58,8 @@ export const Carousel = ({
           <Container mode="flex">
             {photos.map(({ src, alt }, index) => (
               <Slide key={index}>
-                <img src={src} alt={alt} />
+                {/* todo, serve mobile version on mobile */}
+                <Picture src={src + "-1440w"} alt={alt} />
               </Slide>
             ))}
           </Container>
@@ -121,5 +123,6 @@ const Slide = styled(Box, {
     width: "100%",
     height: "100%",
     objectFit: "cover",
+    objectPosition: "center",
   },
 });

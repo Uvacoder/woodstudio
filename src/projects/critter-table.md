@@ -4,15 +4,15 @@ date: "2022-01-06"
 materials: ["Walnut", "brass", "glass"]
 price: "$2750"
 thumbnail: ""
-cover: "/photos/critter01.jpg"
+cover: "/photos/critter01-640w"
 photos:
-  - src: "/photos/critter01.jpg"
+  - src: "/photos/critter01"
     alt: "View of shaped side table with six legs"
-  - src: "/photos/critter02.jpg"
+  - src: "/photos/critter02"
     alt: "Overhead view of six legged side table"
-  - src: "/photos/critter03.jpg"
+  - src: "/photos/critter03"
     alt: "Photo of side table with lounge chair"
-  - src: "/photos/critter04.jpg"
+  - src: "/photos/critter04"
     alt: "Photo of side table underside"
 ---
 

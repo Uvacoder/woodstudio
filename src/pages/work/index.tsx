@@ -4,7 +4,7 @@ import { styled } from "@styles/stitches.config";
 
 import { Box } from "@components/Box";
 import { Text } from "@components/Text";
-import { Image } from "@components/Image";
+import { Picture } from "@components/Picture";
 
 import type { ProjectType } from "@typings/project";
 
@@ -32,7 +32,7 @@ export default function Index({ projects }: Props) {
                   {project.title}
                 </Text>
               </Title>
-              <Image
+              <Picture
                 aspect="square"
                 cover
                 src={project.cover}

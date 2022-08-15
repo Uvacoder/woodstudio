@@ -5,15 +5,15 @@ clients: "Edward and Christine"
 materials: ["Walnut", "maple", "untanned leather"]
 price: "$2750"
 thumbnail: ""
-cover: "/photos/floating-table01.jpg"
+cover: "/photos/floating-table01-640w"
 photos:
-  - src: "/photos/floating-table01.jpg"
+  - src: "/photos/floating-table01"
     alt: "Front view of floating side tables"
-  - src: "/photos/floating-table02.jpg"
+  - src: "/photos/floating-table02"
     alt: "Three quarter view of floating side tables"
-  - src: "/photos/floating-table03.jpg"
+  - src: "/photos/floating-table03"
     alt: "Dovetail detail of floating side tables"
-  - src: "/photos/floating-table04.jpg"
+  - src: "/photos/floating-table04"
     alt: "Back view of floating side tables"
 ---
 

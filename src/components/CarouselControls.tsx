@@ -1,5 +1,5 @@
 import { Box } from "@components/Box";
-import { Image } from "@components/Image";
+import { Picture } from "@components/Picture";
 import { styled } from "@styles/stitches.config";
 
 type ButtonProps = {
@@ -79,7 +79,11 @@ type ThumbProps = {
 export const Thumb = ({ selected, onClick, src, alt = "" }: ThumbProps) => (
   <Slide className={selected ? "is-selected" : ""}>
     <Thumbnail type="button" onClick={onClick}>
-      <Image className="embla__slide__thumbnail" src={src} alt={alt} />
+      <Picture
+        className="embla__slide__thumbnail"
+        src={src + "-thumb"}
+        alt={alt}
+      />
     </Thumbnail>
   </Slide>
 );

@@ -9,7 +9,7 @@ import { Navigation } from "@components/Navigation";
 import { PageLayout } from "@components/PageLayout";
 import { Text } from "@components/Text";
 import { Box } from "@components/Box";
-import { Image } from "@components/Image";
+import { Picture } from "@components/Picture";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
 
       <Box display={{ "@initial": "show", "@m": "hide" }}>
-        <Image src="/coffeetable-front.jpg" alt="Coffee table" />
+        <Picture src="/photos/coffeetable-front-1440w" alt="Coffee table" />
       </Box>
 
       <ContentBox padding={{ "@initial": "compact", "@m": "comfortable" }}>
@@ -80,7 +80,9 @@ Home.getLayout = (page: ReactElement) => {
             css={{
               gridArea: "lede",
               height: "100%",
-              background: "url(/coffeetable-intro.jpg) center center no-repeat",
+              background:
+                "url(/photos/coffeetable-intro-1440w.jpg) center center no-repeat",
+              backgroundImage: "url(/photos/coffeetable-intro-1440w.webp)",
               backgroundSize: "cover",
               borderTop: "1px solid $border",
             }}

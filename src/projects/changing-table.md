@@ -5,11 +5,11 @@ clients: "Edward and Christine"
 materials: ["Walnut", "brass", "glass"]
 price: "$2750"
 thumbnail: ""
-cover: "/photos/changingtable01.jpg"
+cover: "/photos/changingtable01-640w"
 photos:
-  - src: "/photos/changingtable01.jpg"
+  - src: "/photos/changingtable01"
     alt: "Dovetailed changing table"
-  - src: "/photos/changingtable02.jpg"
+  - src: "/photos/changingtable02"
     alt: "Dovetailed changing table on dresser"
 ---
 

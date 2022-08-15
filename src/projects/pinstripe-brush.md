@@ -5,15 +5,15 @@ clients: "Cassie"
 materials: ["Birdseye maple", "dyed veneer", "tampico"]
 price: "$2750"
 thumbnail: ""
-cover: "/photos/brush01.jpg"
+cover: "/photos/brush01-640w"
 photos:
-  - src: "/photos/brush01.jpg"
+  - src: "/photos/brush01"
     alt: "Pinstripe brush detail"
-  - src: "/photos/brush02.jpg"
+  - src: "/photos/brush02"
     alt: "Pinstripe brush detail"
-  - src: "/photos/brush03.jpg"
+  - src: "/photos/brush03"
     alt: "Pinstripe brush detail"
-  - src: "/photos/brush04.jpg"
+  - src: "/photos/brush04"
     alt: "Pinstripe brush detail"
 ---
 
