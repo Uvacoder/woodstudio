@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import type { ReactElement } from "react";
 
-import { styled } from "@styles/stitches.config";
-
 import { Logo } from "@components/Logos";
 import { Navigation } from "@components/Navigation";
 import { PageLayout } from "@components/PageLayout";
@@ -11,7 +9,16 @@ import { Text } from "@components/Text";
 import { Box } from "@components/Box";
 import { Picture } from "@components/Picture";
 
+import { styled } from "@styles/stitches.config";
+import { useMobileDetect } from "@lib/useMobileDetect";
+import { pictureSizes } from "@lib/constants";
+
 export default function Home() {
+  const detect = useMobileDetect();
+
+  const getPictureSize = () =>
+    detect.isMobile() ? pictureSizes.mobile : pictureSizes.desktop;
+
   return (
     <>
       <Head>
@@ -19,7 +26,10 @@ export default function Home() {
       </Head>
 
       <Box display={{ "@initial": "show", "@m": "hide" }}>
-        <Picture src="/photos/coffeetable-front-1440w" alt="Coffee table" />
+        <Picture
+          src={`/photos/coffeetable-front-${getPictureSize()}`}
+          alt="Coffee table"
+        />
       </Box>
 
       <ContentBox padding={{ "@initial": "compact", "@m": "comfortable" }}>
@@ -49,6 +59,10 @@ export default function Home() {
 }
 
 Home.getLayout = (page: ReactElement) => {
+  const detect = useMobileDetect();
+
+  const getPictureSize = () =>
+    detect.isMobile() ? pictureSizes.mobile : pictureSizes.desktop;
   return (
     <>
       {/* Custom desktop layout */}
@@ -80,8 +94,7 @@ Home.getLayout = (page: ReactElement) => {
             css={{
               gridArea: "lede",
               height: "100%",
-              background:
-                "url(/photos/coffeetable-intro-1440w.jpg) center center no-repeat",
+              background: `url(/photos/coffeetable-intro-${getPictureSize()}.jpg) center center no-repeat`,
               backgroundImage: "url(/photos/coffeetable-intro-1440w.webp)",
               backgroundSize: "cover",
               borderTop: "1px solid $border",

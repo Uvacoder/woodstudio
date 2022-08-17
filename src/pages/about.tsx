@@ -5,18 +5,15 @@ import { Box } from "@components/Box";
 import { Text } from "@components/Text";
 import { Picture } from "@components/Picture";
 
+import { useMobileDetect } from "@lib/useMobileDetect";
+import { pictureSizes } from "@lib/constants";
+
 export default function About() {
-  const P = ({ children }) => (
-    <Text
-      as="p"
-      family="secondary"
-      size={{ "@initial": "2.5", "@m": "3" }}
-      lineHeight="paragraph"
-      css={{ marginBottom: "$2" }}
-    >
-      {children}
-    </Text>
-  );
+  const detect = useMobileDetect();
+
+  const getPictureSize = () =>
+    detect.isMobile() ? pictureSizes.mobile : pictureSizes.desktop;
+
   return (
     <>
       <Head>
@@ -68,11 +65,26 @@ export default function About() {
             backgroundColor: "$border",
           }}
         />
-        <Picture src="/photos/me-1440w" alt="Portrait of Justin Belcher" />
+        <Picture
+          src={`/photos/me-${getPictureSize()}`}
+          alt="Portrait of Justin Belcher"
+        />
       </Grid>
     </>
   );
 }
+const P = ({ children }) => (
+  <Text
+    as="p"
+    family="secondary"
+    size={{ "@initial": "2.5", "@m": "3" }}
+    lineHeight="paragraph"
+    css={{ marginBottom: "$2" }}
+  >
+    {children}
+  </Text>
+);
+
 const Grid = styled(Box, {
   gridTemplateRows: "1fr",
   variants: {

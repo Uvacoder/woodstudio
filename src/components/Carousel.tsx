@@ -55,14 +55,8 @@ export const Carousel = ({
 
   const detect = useMobileDetect();
 
-  const getPictureSize = () => {
-    if (detect.isMobile()) {
-      alert("mobile!");
-      return pictureSizes.mobile;
-    } else {
-      return pictureSizes.desktop;
-    }
-  };
+  const getPictureSize = () =>
+    detect.isMobile() ? pictureSizes.mobile : pictureSizes.desktop;
 
   return (
     <Box>
