@@ -37,7 +37,7 @@ export const Text = styled("span", {
       none: { lineHeight: 1 },
       tight: { lineHeight: 1.15 },
       headline: { lineHeight: "1em" },
-      paragraph: { lineHeight: 1.4 },
+      paragraph: { lineHeight: 1.5 },
     },
     style: {
       normal: { fontStyle: "normal" },
