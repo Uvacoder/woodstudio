@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import type { ProjectType } from "@typings/project";
+import type { ProjectType } from "@styles/typings/project";
 
 const projectsDirectory = join(process.cwd(), "src/projects");
 

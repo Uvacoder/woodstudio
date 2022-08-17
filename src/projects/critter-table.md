@@ -1,9 +1,8 @@
 ---
 title: "Critter side table"
 date: "2022-01-06"
-materials: ["Walnut", "brass", "glass"]
-price: "$2750"
-thumbnail: ""
+materials: ["Red Oak"]
+price: ""
 cover: "/photos/critter01-640w"
 photos:
   - src: "/photos/critter01"
@@ -16,7 +15,4 @@ photos:
     alt: "Photo of side table underside"
 ---
 
-Midcentury coffee table in walnut and glass for Edward and Christine. This kinda turned into my
-COVID escape project, resulting in a lot of care and details: turned and staked legs, patchwork
-inlays, shop made veneer, dovetailed drawers, round recessed finger pulls, wooden drawer slides,
-and the ability to replace the glass if anyone decides to drop elbows off the top turnbuckle.
+A weird little six-legged side table with a shaped top and turned legs. Finished with hard wax and black milk paint. I started this piece during [Pat Kim's](https://www.patkimdesign.com/) fantastic sculptural furniture class at [Anderson Ranch Arts Center](https://www.andersonranch.org/). While I explored several forms, I kept coming back to these pillowy, hot dog bun shapes with a bold, graphical plan view. I don't often build furniture this conceptual, but it was a fun opportunity to stretch and experiment.

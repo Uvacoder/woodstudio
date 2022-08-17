@@ -6,7 +6,7 @@ import { Box } from "@components/Box";
 import { Text } from "@components/Text";
 import { Picture } from "@components/Picture";
 
-import type { ProjectType } from "@typings/project";
+import type { ProjectType } from "@styles/typings/project";
 
 type Props = {
   projects: ProjectType[];

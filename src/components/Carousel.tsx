@@ -6,7 +6,7 @@ import { Picture } from "@components/Picture";
 import { PrevButton, NextButton, Thumb } from "@components/CarouselControls";
 import { styled } from "@styles/stitches.config";
 
-import { PhotoType } from "@typings/photo";
+import { PhotoType } from "@styles/typings/photo";
 
 type Props = {
   photos: PhotoType[];

@@ -7,7 +7,7 @@ import { markdownToHtml } from "@lib/markdown";
 
 import { styled } from "@styles/stitches.config";
 
-import type { ProjectType } from "@typings/project";
+import type { ProjectType } from "@styles/typings/project";
 
 type Props = {
   project: ProjectType;
@@ -33,10 +33,15 @@ export default function Project({ project }: Props) {
         padding={{ "@initial": "compact", "@m": "comfortable" }}
       >
         <Header mode="flex" layout={{ "@initial": "stacked", "@m": "spread" }}>
-          <Text as="h1" size="5" css={{ fontWeight: 300, fontStyle: "italic" }}>
+          <Text
+            as="h1"
+            family="secondary"
+            size="5"
+            css={{ fontWeight: 300, fontStyle: "italic" }}
+          >
             {title}
           </Text>
-          <Text size="5" css={{ fontWeight: 300 }}>
+          <Text family="secondary" size="5" css={{ fontWeight: 300 }}>
             {year}
           </Text>
         </Header>
@@ -46,24 +51,26 @@ export default function Project({ project }: Props) {
         {materials && (
           <MetaRow mode="flex">
             <Text
+              family="secondary"
               size="3"
               css={{ textTransform: "uppercase", fontWeight: 500 }}
             >
               Materials
             </Text>
-            <Text>{materials.join(", ")}</Text>
+            <Text family="secondary">{materials.join(", ")}</Text>
           </MetaRow>
         )}
 
         {clients && (
           <MetaRow mode="flex">
             <Text
+              family="secondary"
               size="3"
               css={{ textTransform: "uppercase", fontWeight: 500 }}
             >
               Clients
             </Text>
-            <Text>{clients}</Text>
+            <Text family="secondary">{clients}</Text>
           </MetaRow>
         )}
       </Meta>

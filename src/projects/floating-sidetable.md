@@ -1,10 +1,9 @@
 ---
 title: "Floating bedside tables"
 date: "2019-04-08"
-clients: "Edward and Christine"
+clients: "Charlie"
 materials: ["Walnut", "maple", "untanned leather"]
-price: "$2750"
-thumbnail: ""
+price: "$"
 cover: "/photos/floating-table01-640w"
 photos:
   - src: "/photos/floating-table01"
@@ -17,7 +16,4 @@ photos:
     alt: "Back view of floating side tables"
 ---
 
-Midcentury coffee table in walnut and glass for Edward and Christine. This kinda turned into my
-COVID escape project, resulting in a lot of care and details: turned and staked legs, patchwork
-inlays, shop made veneer, dovetailed drawers, round recessed finger pulls, wooden drawer slides,
-and the ability to replace the glass if anyone decides to drop elbows off the top turnbuckle.
+A pair of floating nightstands for Charlie and his growing family. There are lots of fun details in this one, including grain-matched drawer fronts, rounded case bottoms, custom natural leather drawer pulls, dovetailed soft close doors, and integrated cord routing for that all-important smartphone charger.

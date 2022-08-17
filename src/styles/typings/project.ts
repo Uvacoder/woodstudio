@@ -1,4 +1,4 @@
-import type { PhotoType } from "@typings/photo";
+import type { PhotoType } from "@styles/typings/photo";
 
 export type ProjectType = {
   title?: string;

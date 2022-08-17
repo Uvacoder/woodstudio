@@ -1,10 +1,9 @@
 ---
 title: "Various small projects"
 date: "2015-05-05"
-clients: "Edward and Christine"
-materials: ["Walnut", "brass", "glass"]
-price: "$2750"
-thumbnail: ""
+clients: ""
+materials: ["Assorted hardwoods"]
+price: ""
 cover: "/photos/small01-640w"
 photos:
   - src: "/photos/small01"
@@ -29,7 +28,4 @@ photos:
     alt: "Vintage butcher block rebuild"
 ---
 
-Midcentury coffee table in walnut and glass for Edward and Christine. This kinda turned into my
-COVID escape project, resulting in a lot of care and details: turned and staked legs, patchwork
-inlays, shop made veneer, dovetailed drawers, round recessed finger pulls, wooden drawer slides,
-and the ability to replace the glass if anyone decides to drop elbows off the top turnbuckle.
+I always enjoy building small useful things, which you can see a range of on display here. From plant stands, to bathroom trays, to picture frames and vintage butcher block rebuilds&mdash;sometimes there's a good bit of challenge in working at small scales.

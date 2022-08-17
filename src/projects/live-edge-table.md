@@ -1,9 +1,9 @@
 ---
 title: "Live edge dining table"
 date: "2015-06-15"
-clients: "Edward and Christine"
+clients: ""
 materials: ["Walnut", "oiled steel"]
-price: "$2750"
+price: "$"
 thumbnail: ""
 cover: "/photos/dining-table01-640w"
 photos:
@@ -13,7 +13,4 @@ photos:
     alt: "detail of live edge dining table"
 ---
 
-Midcentury coffee table in walnut and glass for Edward and Christine. This kinda turned into my
-COVID escape project, resulting in a lot of care and details: turned and staked legs, patchwork
-inlays, shop made veneer, dovetailed drawers, round recessed finger pulls, wooden drawer slides,
-and the ability to replace the glass if anyone decides to drop elbows off the top turnbuckle.
+This large, live edge dining table is made from several slabs of black walnut from my home state of West Virginia. The top is buttressed by a custom, intersecting metal base that's a modern take on hairpin legs&mdash;producing interesting shapes when viewed from different angles. The accompanying Tolex chairs have been capped with matching walnut seats to make everything feel like a cohesive piece.

@@ -1,10 +1,9 @@
 ---
-title: "Midcentury crib"
+title: "Mid-century crib"
 date: "2019-09-20"
-clients: "Edward and Christine"
-materials: ["Walnut", "brass", "glass"]
-price: "$2750"
-thumbnail: ""
+clients: "Shanon and Damon"
+materials: ["Walnut"]
+price: ""
 cover: "/photos/crib-cover-640w"
 photos:
   - src: "/photos/crib01"
@@ -21,7 +20,4 @@ photos:
     alt: "Turned legs detail"
 ---
 
-Midcentury coffee table in walnut and glass for Edward and Christine. This kinda turned into my
-COVID escape project, resulting in a lot of care and details: turned and staked legs, patchwork
-inlays, shop made veneer, dovetailed drawers, round recessed finger pulls, wooden drawer slides,
-and the ability to replace the glass if anyone decides to drop elbows off the top turnbuckle.
+A one of a kind crib for some dear friends' first born. I was honored to be asked to design and build a crib for their little one, and decided to go all out in honor of the moment. This knockdown-constructed, mid-century style walnut crib features Niemeyer-inspired shaped end panels, drawbored bridle framing, hand-tapered legs, and an adjustable bed platform for a growing tyke.
