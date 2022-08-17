@@ -57,8 +57,8 @@ export default function About() {
           <P>
             When not making furniture at my small home shop in the Castro or at
             Hunt Projects in the Bayview, I am a full-time designer and manager
-            at Google in SF. Please get in touch if there's anything we could
-            realize together.
+            at Google in SF. Please get in touch if there's anything we can
+            build together.
           </P>
         </ContentBox>
         <Box
