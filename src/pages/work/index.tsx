@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Head from "next/head";
+
 import { getAllProjects } from "@lib/api";
 import { styled } from "@styles/stitches.config";
 
@@ -14,35 +16,40 @@ type Props = {
 
 export default function Index({ projects }: Props) {
   return (
-    <WorkGrid
-      mode="grid"
-      layout={{ "@initial": "mobile", "@m": "desktop" }}
-      padding={{ "@initial": "compact", "@m": "comfortable" }}
-    >
-      {projects.map((project) => (
-        <Link
-          key={project.slug}
-          as={`/work/${project.slug}`}
-          href={`/work/[slug]`}
-        >
-          <a>
-            <Card>
-              <Title mode="flex">
-                <Text as="h2" size="5">
-                  {project.title}
-                </Text>
-              </Title>
-              <Picture
-                aspect="square"
-                cover
-                src={project.cover}
-                alt={project.title}
-              />
-            </Card>
-          </a>
-        </Link>
-      ))}
-    </WorkGrid>
+    <>
+      <Head>
+        <title>Select Projects ✷ On End Studio</title>
+      </Head>
+      <WorkGrid
+        mode="grid"
+        layout={{ "@initial": "mobile", "@m": "desktop" }}
+        padding={{ "@initial": "compact", "@m": "comfortable" }}
+      >
+        {projects.map((project) => (
+          <Link
+            key={project.slug}
+            as={`/work/${project.slug}`}
+            href={`/work/[slug]`}
+          >
+            <a>
+              <Card>
+                <Title mode="flex">
+                  <Text as="h2" size="5">
+                    {project.title}
+                  </Text>
+                </Title>
+                <Picture
+                  aspect="square"
+                  cover
+                  src={project.cover}
+                  alt={project.title}
+                />
+              </Card>
+            </a>
+          </Link>
+        ))}
+      </WorkGrid>
+    </>
   );
 }
 const WorkGrid = styled(Box, {

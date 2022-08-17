@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { Box } from "@components/Box";
 import { Carousel } from "@components/Carousel";
 import { Text } from "@components/Text";
@@ -19,62 +21,70 @@ export default function Project({ project }: Props) {
   const year = new Date(date).getFullYear();
 
   return (
-    <Grid mode="grid" layout={{ "@initial": "mobile", "@m": "desktop" }}>
-      <Carousel photos={photos} />
-      <Box
-        css={{
-          width: 1,
-          height: "100%",
-          backgroundColor: "$border",
-        }}
-      />
-      <Meta
-        mode="flex"
-        padding={{ "@initial": "compact", "@m": "comfortable" }}
-      >
-        <Header mode="flex" layout={{ "@initial": "stacked", "@m": "spread" }}>
-          <Text
-            as="h1"
-            family="secondary"
-            size="5"
-            css={{ fontWeight: 300, fontStyle: "italic" }}
+    <>
+      <Head>
+        <title>{title} ✷ On End Studio</title>
+      </Head>
+      <Grid mode="grid" layout={{ "@initial": "mobile", "@m": "desktop" }}>
+        <Carousel photos={photos} />
+        <Box
+          css={{
+            width: 1,
+            height: "100%",
+            backgroundColor: "$border",
+          }}
+        />
+        <Meta
+          mode="flex"
+          padding={{ "@initial": "compact", "@m": "comfortable" }}
+        >
+          <Header
+            mode="flex"
+            layout={{ "@initial": "stacked", "@m": "spread" }}
           >
-            {title}
-          </Text>
-          <Text family="secondary" size="5" css={{ fontWeight: 300 }}>
-            {year}
-          </Text>
-        </Header>
-        <Description
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></Description>
-        {materials && (
-          <MetaRow mode="flex">
             <Text
+              as="h1"
               family="secondary"
-              size="3"
-              css={{ textTransform: "uppercase", fontWeight: 500 }}
+              size="5"
+              css={{ fontWeight: 300, fontStyle: "italic" }}
             >
-              Materials
+              {title}
             </Text>
-            <Text family="secondary">{materials.join(", ")}</Text>
-          </MetaRow>
-        )}
+            <Text family="secondary" size="5" css={{ fontWeight: 300 }}>
+              {year}
+            </Text>
+          </Header>
+          <Description
+            dangerouslySetInnerHTML={{ __html: content }}
+          ></Description>
+          {materials && (
+            <MetaRow mode="flex">
+              <Text
+                family="secondary"
+                size="3"
+                css={{ textTransform: "uppercase", fontWeight: 500 }}
+              >
+                Materials
+              </Text>
+              <Text family="secondary">{materials.join(", ")}</Text>
+            </MetaRow>
+          )}
 
-        {clients && (
-          <MetaRow mode="flex">
-            <Text
-              family="secondary"
-              size="3"
-              css={{ textTransform: "uppercase", fontWeight: 500 }}
-            >
-              Clients
-            </Text>
-            <Text family="secondary">{clients}</Text>
-          </MetaRow>
-        )}
-      </Meta>
-    </Grid>
+          {clients && (
+            <MetaRow mode="flex">
+              <Text
+                family="secondary"
+                size="3"
+                css={{ textTransform: "uppercase", fontWeight: 500 }}
+              >
+                Clients
+              </Text>
+              <Text family="secondary">{clients}</Text>
+            </MetaRow>
+          )}
+        </Meta>
+      </Grid>
+    </>
   );
 }
 

@@ -56,7 +56,23 @@ export default class Document extends NextDocument {
         <Head>
           <FontPreload />
           <FaviconLinks />
-          <meta name="theme-color" content="#F3F1EF" />
+          <meta name="theme-color" content="#f3f1ef" />
+          <meta
+            name="description"
+            content="Justin Belcher is a designer and furniture maker based out of San Francisco, 
+            California. His work focuses on unexpected forms grounded in a modern Nordic 
+            vernacular."
+          />
+          <meta property="og:title" content="On End Studio" />
+          <meta
+            property="og:description"
+            content="Justin Belcher is a designer and furniture maker based out of San Francisco, 
+            California."
+          />
+          <meta
+            property="og:image"
+            content="https://onend.studio/photos/coffeetable-front-640w.jpg"
+          />
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}

@@ -20,7 +20,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Justin | On End Studio</title>
+        <title>About Justin ✷ On End Studio</title>
       </Head>
       <Grid mode="grid" layout={{ "@initial": "mobile", "@m": "desktop" }}>
         <ContentBox padding={{ "@initial": "compact", "@m": "comfortable" }}>
@@ -49,10 +49,10 @@ export default function About() {
             it myself. I've been obsessed ever since.
           </P>
           <P>
-            My work focuses on unexpected forms grounded in a modern
-            scandanivian vernacular. I offer design services, millwork
-            fabrication, and lovingly crafted, functional pieces of furniture
-            made by hand under the worried oversight of my shop dog Pixie.
+            My work focuses on unexpected forms grounded in a modern Nordic
+            vernacular. I offer design services, millwork fabrication, and
+            lovingly crafted, functional pieces of furniture made by hand under
+            the worried oversight of my shop dog Pixie.
           </P>
           <P>
             When not making furniture at my small home shop in the Castro or at
