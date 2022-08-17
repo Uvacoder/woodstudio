@@ -7,6 +7,8 @@ import { PrevButton, NextButton, Thumb } from "@components/CarouselControls";
 import { styled } from "@styles/stitches.config";
 
 import { PhotoType } from "@styles/typings/photo";
+import { useMobileDetect } from "@lib/useMobileDetect";
+import { pictureSizes } from "@lib/constants";
 
 type Props = {
   photos: PhotoType[];
@@ -51,6 +53,17 @@ export const Carousel = ({
     embla.on("select", onSelect);
   }, [embla, onSelect]);
 
+  const detect = useMobileDetect();
+
+  const getPictureSize = () => {
+    if (detect.isMobile()) {
+      alert("mobile!");
+      return pictureSizes.mobile;
+    } else {
+      return pictureSizes.desktop;
+    }
+  };
+
   return (
     <Box>
       <Embla>
@@ -58,8 +71,7 @@ export const Carousel = ({
           <Container mode="flex">
             {photos.map(({ src, alt }, index) => (
               <Slide key={index}>
-                {/* todo, serve mobile version on mobile */}
-                <Picture src={src + "-1440w"} alt={alt} />
+                <Picture src={`${src}-${getPictureSize()}`} alt={alt} />
               </Slide>
             ))}
           </Container>

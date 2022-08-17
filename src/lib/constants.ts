@@ -8,3 +8,8 @@ export const routes = [
     slug: "http://instagram.com/onendstudio",
   },
 ];
+
+export const pictureSizes = {
+  desktop: "1440w",
+  mobile: "640w",
+};
