@@ -9,7 +9,8 @@ export default function About() {
   const P = ({ children }) => (
     <Text
       as="p"
-      size={{ "@intiial": "2", "@m": "3" }}
+      family="secondary"
+      size={{ "@initial": "2.5", "@m": "3" }}
       lineHeight="paragraph"
       css={{ marginBottom: "$2" }}
     >
@@ -27,17 +28,16 @@ export default function About() {
             as="h1"
             family="secondary"
             style="italic"
-            size={{ "@initial": "6", "@m": "6" }}
+            size={{ "@initial": "5", "@m": "6" }}
             weight="light"
             lineHeight="tight"
             css={{ marginBottom: "$3" }}
           >
-            About Me
+            About Justin
           </Text>
           <P>
-            Hi 👋. My name is Justin Belcher. I am a designer and furniture
-            maker based out of San Francisco, CA. This site is a collection of
-            my work.
+            I am a designer and furniture maker based out of San Francisco, CA.
+            This site is a collection of my work.
           </P>
           <P>
             I grew up as a farm kid in West Virginia, helping my family build

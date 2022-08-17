@@ -8,6 +8,7 @@ export const Text = styled("span", {
     size: {
       1: { fontSize: "$1" },
       2: { fontSize: "$2" },
+      2.5: { fontSize: "$2.5" },
       3: { fontSize: "$3" },
       4: { fontSize: "$4" },
       5: { fontSize: "$5" },

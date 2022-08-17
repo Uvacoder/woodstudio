@@ -37,6 +37,7 @@ export const {
     fontSizes: {
       1: "12px",
       2: "14px",
+      2.5: "16px",
       3: "18px",
       4: "21px",
       5: "30px",
