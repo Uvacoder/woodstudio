@@ -6,9 +6,9 @@
     "build": "next build",
     "start": "next start",
     "clean": "rm -rf public/photos",
-    "thumbs": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":50}' --resize '{\"enabled\": true, \"width\":200}' -d public/photos src/images/critter* -s '-200w'",
-    "mobile": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":50}' --resize '{\"width\":640}' -d public/photos src/images/critter* -s '-640w'",
-    "images": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":30}' --resize '{\"width\":1440}' -d public/photos src/images/critter* -s '-1440w'"
+    "thumbs": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":50}' --resize '{\"enabled\": true, \"width\":200}' -d public/photos src/images/me* -s '-200w'",
+    "mobile": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":50}' --resize '{\"width\":640}' -d public/photos src/images/me* -s '-640w'",
+    "images": "npx @squoosh/cli --webp '{}' --mozjpeg '{\"quality\":30}' --resize '{\"width\":1440}' -d public/photos src/images/me* -s '-1440w'"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",

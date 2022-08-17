@@ -12,6 +12,7 @@ export const Text = styled("span", {
       4: { fontSize: "$4" },
       5: { fontSize: "$5" },
       6: { fontSize: "$6" },
+      7: { fontSize: "$7" },
       r1: { fontSize: "$r1" },
       r2: { fontSize: "$r2" },
       r3: { fontSize: "$r3" },
@@ -19,6 +20,10 @@ export const Text = styled("span", {
     },
     color: {
       black: { color: "$black" },
+    },
+    family: {
+      primary: { fontFamily: "$primary" },
+      secondary: { fontFamily: "$secondary" },
     },
     weight: {
       light: { fontWeight: 300 },
@@ -30,6 +35,7 @@ export const Text = styled("span", {
     lineHeight: {
       none: { lineHeight: 1 },
       tight: { lineHeight: 1.15 },
+      headline: { lineHeight: "1em" },
       paragraph: { lineHeight: 1.4 },
     },
     style: {
@@ -80,5 +86,6 @@ export const Text = styled("span", {
     transform: "none",
     decoration: "none",
     color: "black",
+    family: "primary",
   },
 });
