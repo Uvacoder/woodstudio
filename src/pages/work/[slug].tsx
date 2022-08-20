@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { Box } from "@components/Box";
-import { Carousel } from "@components/Carousel";
+import { Gallery } from "@components/Gallery";
 import { Text } from "@components/Text";
 
 import { getProjectBySlug, getAllProjects } from "@lib/api";
@@ -26,7 +26,7 @@ export default function Project({ project }: Props) {
         <title>{title} ✷ On End Studio</title>
       </Head>
       <Grid mode="grid" layout={{ "@initial": "mobile", "@m": "desktop" }}>
-        <Carousel photos={photos} />
+        <Gallery photos={photos} />
         <Box
           css={{
             width: 1,

@@ -37,6 +37,7 @@ export default function Home() {
           as="h1"
           size={{ "@initial": "r4", "@m": "r2" }}
           weight="light"
+          lineHeight="loose"
           css={{ marginBottom: "$3" }}
         >
           Some really nice things for your home ✷ Made upright with care by
