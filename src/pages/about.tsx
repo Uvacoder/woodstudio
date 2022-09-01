@@ -86,7 +86,7 @@ const P = ({ children }) => (
   <Text
     as="p"
     family="secondary"
-    size={{ "@initial": "2.5", "@m": "3" }}
+    size={{ "@initial": "25", "@m": "3" }}
     lineHeight="paragraph"
     css={{ marginBottom: "$2" }}
   >
