@@ -32,18 +32,27 @@ export default function About() {
           >
             About Justin
           </Text>
-          <P>
+          <Text
+            as="h2"
+            family="secondary"
+            size={{ "@initial": "4", "@m": "45" }}
+            css={{ marginBottom: "$3" }}
+          >
             I am a designer and furniture maker based out of San Francisco, CA.
             This site is a collection of my work.
-          </P>
+          </Text>
           <P>
             I grew up as a farm kid in West Virginia, helping my family build
             fences, buildings, and houses. I got my start in woodworking in
             2012, when I was on the hunt for a mid-century credenza for our
             first home in Durham, NC. At the time I didn't understand why a
             rectangle of wood costs $3,000, but a friend and a skilled named
-            artist Elijah Leed was willing to show me the ropes so I could build
-            it myself. I've been obsessed ever since.
+            artist{" "}
+            <a href="https://www.elijahleed.com/" title="Elijah Leed Studio">
+              Elijah Leed
+            </a>{" "}
+            was willing to show me the ropes so I could build it myself. I've
+            been obsessed ever since.
           </P>
           <P>
             My work focuses on unexpected forms grounded in a modern Nordic

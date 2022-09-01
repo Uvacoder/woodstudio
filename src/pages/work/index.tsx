@@ -43,6 +43,7 @@ export default function Index({ projects }: Props) {
                   cover
                   src={project.cover}
                   alt={project.title}
+                  css={{ width: "100%", height: "100%" }}
                 />
               </Card>
             </a>

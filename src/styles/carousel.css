@@ -87,12 +87,10 @@
   font-size: 18px;
 }
 .carousel .thumbs-wrapper {
-  margin-top: 2px;
   overflow: hidden;
 }
 .carousel .thumbs {
   height: 100px;
-  margin-bottom: 2px;
   -webkit-transition: all 0.15s ease-in;
   -moz-transition: all 0.15s ease-in;
   -ms-transition: all 0.15s ease-in;
