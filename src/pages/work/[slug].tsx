@@ -170,7 +170,7 @@ export const getStaticProps = async ({ params }: Params) => {
 };
 
 export async function getStaticPaths() {
-  const projects = getAllProjects(["slug"]);
+  const projects = getAllProjects(["slug", "published"]);
 
   return {
     paths: projects.map((project) => {
