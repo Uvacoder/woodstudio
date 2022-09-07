@@ -9,7 +9,7 @@ import { markdownToHtml } from "@lib/markdown";
 
 import { styled } from "@styles/stitches.config";
 
-import type { ProjectType } from "@styles/typings/project";
+import type { ProjectType } from "@typings/project";
 
 type Props = {
   project: ProjectType;

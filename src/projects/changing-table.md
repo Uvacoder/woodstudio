@@ -1,6 +1,7 @@
 ---
 title: "Dovetailed changing table"
 date: "2019-06-15"
+published: true
 clients: "Shanon and Damon"
 materials: ["Walnut", "melamine"]
 price: "$"

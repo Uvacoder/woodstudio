@@ -1,6 +1,7 @@
 ---
 title: "Calhoun Coffee Table"
 date: "2021-03-20"
+published: true
 clients: "Edward and Christine"
 materials: ["Walnut", "brass", "glass"]
 price: "$2750"

@@ -1,6 +1,7 @@
 ---
 title: "Mid-century crib"
 date: "2019-09-20"
+published: true
 clients: "Shanon and Damon"
 materials: ["Walnut"]
 price: ""

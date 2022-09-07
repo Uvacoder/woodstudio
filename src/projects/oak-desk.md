@@ -1,6 +1,7 @@
 ---
 title: "Oak desk"
 date: "2022-06-01"
+published: true
 clients: "Derek"
 materials: ["White oak", "baltic birch plywood", "stainless steel"]
 price: "$"

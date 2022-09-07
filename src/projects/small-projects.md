@@ -1,6 +1,7 @@
 ---
 title: "Various small projects"
 date: "2015-05-05"
+published: true
 clients: ""
 materials: ["Assorted hardwoods"]
 price: ""

@@ -1,6 +1,7 @@
 ---
 title: "Pinstripe brush"
 date: "2020-09-20"
+published: false
 clients: "Cass"
 materials: ["Birdseye maple", "dyed veneer", "tampico"]
 price: ""

@@ -1,6 +1,7 @@
 ---
 title: "Critter side table"
 date: "2022-01-06"
+published: true
 materials: ["Red Oak"]
 price: ""
 cover: "/photos/critter01-640w"

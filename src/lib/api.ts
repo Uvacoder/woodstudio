@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import type { ProjectType } from "@styles/typings/project";
+import type { ProjectType } from "@typings/project";
 
 const projectsDirectory = join(process.cwd(), "src/projects");
 
@@ -38,6 +38,7 @@ export const getAllProjects = (fields: string[] = []): ProjectType[] => {
   const slugs = getSlugs();
   const projects = slugs
     .map((slug) => getProjectBySlug(slug, fields))
+    .filter((p) => p.published)
     .sort((p1, p2) => (p1.date > p2.date ? -1 : 1));
   return projects;
 };

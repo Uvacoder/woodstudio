@@ -1,6 +1,7 @@
 ---
 title: "Floating bedside tables"
 date: "2019-04-08"
+published: true
 clients: "Charlie"
 materials: ["Walnut", "maple", "untanned leather"]
 price: "$"

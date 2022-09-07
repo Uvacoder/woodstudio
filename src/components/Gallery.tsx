@@ -5,7 +5,7 @@ import { Box } from "@components/Box";
 import { Picture } from "@components/Picture";
 import { styled } from "@styles/stitches.config";
 
-import { PhotoType } from "@styles/typings/photo";
+import { PhotoType } from "@typings/photo";
 import { useMobileDetect } from "@lib/useMobileDetect";
 import { pictureSizes } from "@lib/constants";
 

@@ -1,6 +1,7 @@
 ---
 title: "Live edge dining table"
 date: "2015-06-15"
+published: true
 clients: ""
 materials: ["Walnut", "oiled steel"]
 price: "$"
