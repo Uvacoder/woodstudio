@@ -46,8 +46,8 @@ export default function About() {
             fences, buildings, and houses. I got my start in woodworking in
             2012, when I was on the hunt for a mid-century credenza for our
             first home in Durham, NC. At the time I didn't understand why a
-            rectangle of wood costs $3,000, but a friend and a skilled named
-            artist{" "}
+            rectangle of wood costs $3,000, but a friend and a skilled artist
+            named{" "}
             <a href="https://www.elijahleed.com/" title="Elijah Leed Studio">
               Elijah Leed
             </a>{" "}
